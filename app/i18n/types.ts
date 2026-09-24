@@ -80,7 +80,10 @@ export interface LocaleMessages {
     submit: string
     sending: string
     whatsapp: string
+    /* Web3Forms confirmed the send. */
     sent: string
+    /* The mail app was opened with the enquiry typed out. */
+    sentMail: string
     errorRequired: string
     errorDates: string
     errorSend: string

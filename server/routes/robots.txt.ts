@@ -13,7 +13,7 @@ const ALLOWED_AGENTS = [
   'DuckDuckBot',
   'YandexBot',
   /*
-   * Answer engines. These increasingly mediate "rent a car Bihac" and "car hire near Plitvice"
+   * Answer engines. These increasingly mediate "rent a car Prijedor"
    * style questions for travellers, and a blocked crawler here means the
    * business is simply absent from the answer.
    */

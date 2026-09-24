@@ -54,11 +54,12 @@ function loadProvider(gaId: string, plausibleDomain: string) {
 
   if (plausibleDomain) {
     // Cookieless, ~1 KB, no consent banner required.
-    window.plausible = window.plausible || ((...args: unknown[]) => {
-      ;(window.plausible as unknown as { q?: unknown[] }).q
-        = (window.plausible as unknown as { q?: unknown[] }).q || []
-      ;(window.plausible as unknown as { q: unknown[] }).q.push(args)
-    }) as typeof window.plausible
+    if (!window.plausible) {
+      const queue: unknown[] = []
+      const stub = (...args: unknown[]) => { queue.push(args) }
+      ;(stub as unknown as { q: unknown[] }).q = queue
+      window.plausible = stub as unknown as NonNullable<Window['plausible']>
+    }
     injectScript('https://plausible.io/js/script.tagged-events.js', {
       'data-domain': plausibleDomain,
     })
@@ -112,7 +113,7 @@ export function useClickTracking() {
 
     if (href.includes('g.page/r/')) return { event: 'review_click', params: {} }
 
-    if (href.includes('google.com/maps')) return { event: 'maps_click', params: {} }
+    if (href.includes('google.com/maps') || href.includes('maps.app.goo.gl')) return { event: 'maps_click', params: {} }
 
     if (href.includes('wa.me/')) {
       /*

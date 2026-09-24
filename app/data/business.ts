@@ -59,6 +59,15 @@ export const BUSINESS = {
   instagramUrl: '',
 } as const
 
+/*
+ * TODO(client): the full rental terms (deposit, driver age, mileage, fuel,
+ * cross-border, cancellation) are still to come from the client. Until then
+ * /uslovi carries only what is certain, is noindex, and stays out of the
+ * sitemap, so a placeholder is never what Google shows for "uslovi najma".
+ * Flip this once the real terms are on the page.
+ */
+export const TERMS_COMPLETE = false
+
 /* WhatsApp deep link with the message already typed. */
 export function whatsappHref(message?: string) {
   if (!message) return BUSINESS.whatsappHref

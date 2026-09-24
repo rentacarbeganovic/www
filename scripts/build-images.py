@@ -82,8 +82,10 @@ def build_brand():
     logo.thumbnail((900, 900), Image.LANCZOS)
     keyed = key_white(logo)
     keyed = keyed.crop(keyed.getbbox())
-    keyed.save(f'{OUT}/brand/logo.webp', 'WEBP', quality=90, method=6)
-    redraw_for_dark(keyed).save(f'{OUT}/brand/logo-dark.webp', 'WEBP', quality=90, method=6)
+    # Shown at most ~150px wide (footer); 480px covers 3x screens.
+    keyed.thumbnail((480, 480), Image.LANCZOS)
+    keyed.save(f'{OUT}/brand/logo.webp', 'WEBP', quality=78, alpha_quality=80, method=6)
+    redraw_for_dark(keyed).save(f'{OUT}/brand/logo-dark.webp', 'WEBP', quality=78, alpha_quality=80, method=6)
     print('  brand/logo.webp', keyed.size)
 
 

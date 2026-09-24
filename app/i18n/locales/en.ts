@@ -1,453 +1,341 @@
 import type { LocaleMessages } from '../types'
 
-/*
- * English — translated from bs.ts, which is the master. Re-read against it
- * whenever the Bosnian changes.
- *
- * The English reader is usually a traveller who has landed at Zagreb or Zadar
- * and is heading for Plitvice or the Una valley, so this locale front-loads the
- * two facts that decide it for them: the distances, and that they will not need
- * the credit card the airport desks insist on.
- */
+/* Translation of bs.ts. The claims policy at the top of that file applies. */
 export const en: LocaleMessages = {
   meta: {
-    title: 'Rent a Car Gogo Bihać — car hire with no credit card',
+    title: 'Car Rental Prijedor — Beganović | Automatic & Manual',
     description:
-      'Car hire in Bihać with no credit card required. Deposit 400 KM (€200), '
-      + 'refunded in full. Delivery to your address, hotel or airport. Rated 5.0.',
-    ogImageAlt: 'A Rent a Car Gogo vehicle on the road above the Una river near Bihać',
+      'Rent a Car Beganović in Prijedor, Bosnia: six cars with automatic or manual gearbox, '
+      + 'a seven-seater and an SUV. Pick-up on the M4 in Brđani near Kozarac. Call +387 62 269 229.',
+    ogImageAlt: 'Rent a Car Beganović fleet above Prijedor at sunset',
   },
-
   nav: {
     fleet: 'Cars',
     about: 'About',
     terms: 'Terms',
-    blog: 'Guides',
+    blog: 'Blog',
     contact: 'Contact',
-    prices: 'Prices',
-    services: 'With a driver',
-    airport: 'Airport delivery',
-    plitvice: 'Plitvice Lakes',
-    una: 'Una National Park',
-    book: 'Enquire',
+    call: 'Call',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
     mainNav: 'Main navigation',
     mobileNav: 'Mobile navigation',
-    langLabel: 'Language',
+    langLabel: 'Change language',
   },
-
   hero: {
-    eyebrow: 'Bihać · Una National Park · Plitvice Lakes',
-    titleLead: 'Hire a car in Bihać',
-    titleAccent: 'with no credit card.',
-    titleTail: '',
+    location: 'M4, Brđani near Kozarac · Prijedor',
+    titleLead: 'Car rental in Prijedor.',
+    titleAccent: 'Get in and go.',
     subtitle:
-      'The deposit is 400 KM (€200) and you get all of it back. Confirm by call '
-      + 'or message, and pay in cash when you pick the car up.',
-    imageAlt:
-      'A grey Rent a Car Gogo vehicle on a road above the Una river near Bihać '
-      + 'in morning light',
+      'Six cars — automatic and manual, compact, family and SUV — right on the M4 main road. '
+      + 'Send your dates, get the total price up front and a car ready for the road.',
+    ctaCall: 'Call',
+    ctaForm: 'Send enquiry',
     proof: [
-      'We bring the car to your address, hotel or airport, by prior arrangement',
-      'No hidden costs — you get the total before you confirm',
+      'Total price before you confirm',
+      'Three automatics in the fleet',
+      'Straight onto the main road, no city traffic',
     ],
+    lineupAlt: 'Peugeot 5008, Golf 6, Peugeot 308, Golf 7 and Mazda 5 — the Rent a Car Beganović fleet',
   },
-
-  enquiry: {
+  form: {
     title: 'Check availability',
-    note: 'We reply during opening hours, usually within minutes.',
-    dates: 'Dates',
-    datesPlaceholder: 'e.g. 12 – 19 July',
-    people: 'Passengers',
-    peoplePlaceholder: 'e.g. 4',
-    pickup: 'Pick-up point',
-    pickupPlaceholder: 'Bihać, hotel, airport…',
-    car: 'Vehicle',
-    carAny: 'No preference — suggest one',
-    submit: 'Send enquiry on WhatsApp',
-    intro: 'Hello! I would like to enquire about hiring a car.',
-    reassure: 'No commitment. You get a price before you agree to anything.',
+    note: 'We reply by phone or message.',
+    pickupDate: 'Pick-up',
+    returnDate: 'Return',
+    car: 'Car',
+    carAny: 'Any — suggest one',
+    name: 'Full name',
+    namePlaceholder: 'Your name',
+    phone: 'Phone',
+    phonePlaceholder: '+49 …',
+    message: 'Note',
+    messagePlaceholder: 'E.g. number of passengers, pick-up time…',
+    submit: 'Send enquiry',
+    sending: 'Sending…',
+    whatsapp: 'Send via WhatsApp',
+    sent: 'Thank you! Your enquiry has arrived — we will be in touch soon.',
+    sentMail: 'We opened an email with your enquiry. Just press “Send” and we will get back to you soon.',
+    errorRequired: 'Required',
+    errorDates: 'Return must be after pick-up',
+    errorSend: 'Sending failed. Please call us or write on WhatsApp.',
+    subject: 'Car rental enquiry',
+    reassure: 'No obligation. A booking is only valid once you confirm it.',
   },
-
-  facts: [
-    { value: '5.0', label: 'average rating on Google' },
-    { value: '11', label: 'cars — from a city hatchback to a minibus' },
-    { value: '400 KM', label: 'deposit, refunded in full' },
-    { value: '35 km', label: 'from us to the Plitvice Lakes' },
+  marquee: [
+    'Car rental Prijedor',
+    'Automatic & manual',
+    'Seven-seater for families',
+    'Right on the M4',
+    'Kozara in 25 minutes',
+    'Banja Luka in 45 minutes',
+    'Price known up front',
   ],
-
-  benefits: {
-    title: 'Three things that usually complicate car hire — not here',
-    intro:
-      'These are the questions that make people abandon a booking. So we answer '
-      + 'them here, not in the small print.',
+  why: {
+    eyebrow: 'Why us',
+    title: 'Car rental the way you would want it',
+    intro: 'A small local agency with clear rules. Here is what you get when you rent from us.',
     items: [
       {
-        title: 'No credit card',
-        body:
-          'You confirm by call or message — we do not need a card number up '
-          + 'front. You pay in cash when you collect the car. Nothing is blocked '
-          + 'and nothing is charged before you are sitting in it.',
+        title: 'Fair price, no small print',
+        body: 'You know the total before you confirm anything. No extra charges that only appear when you collect the keys.',
       },
       {
-        title: 'A 400 KM deposit, and not a mark more',
-        body:
-          'The deposit is 400 KM, or €200. You get all of it back when you '
-          + 'return the car undamaged and in the condition you took it. No '
-          + 'handling fees and no deductions you did not see in advance.',
+        title: 'On the road straight away',
+        body: 'We are on the M4 main road in Brđani, between Prijedor and Kozarac. Take the keys and you are already on the highway — no city traffic, no hunting for parking.',
       },
       {
-        title: 'The car comes to you',
-        body:
-          'Bihać has no airport, so we do not pretend to run a desk in a '
-          + 'terminal. We do the opposite: we bring the car to your address, to '
-          + 'your hotel, or we meet you at whichever airport you land at — by '
-          + 'prior arrangement. You pick the place and the time in advance.',
+        title: 'Automatic or manual',
+        body: 'Three automatics and three manuals: from a Golf for town, to a seven-seater for the whole family, to the Kuga for Kozara’s mountain roads.',
+      },
+      {
+        title: 'Talk to us, not a call centre',
+        body: 'Call or send a WhatsApp message and arrange everything directly with the people who hand you the car. Fast, with no complicated procedures.',
       },
     ],
   },
-
-  reviews: {
-    title: 'Rated 5.0 — by people who actually drove',
-    intro:
-      'The reviews below are public and unedited. Each one links to its original '
-      + 'on Google Maps, so you can check them without taking our word for it.',
-    ratingLabel: 'Rating on Google',
-    ratingCount: 'based on {n} reviews',
-    onGoogle: 'on Google',
-    translatedNote: 'Translated by Google',
-    readOnGoogle: 'Read on Google',
-    allReviews: 'All reviews on Google Maps',
-  },
-
   fleet: {
-    eyebrow: 'The fleet',
-    title: 'Eleven cars. Every photo taken outside our own office.',
-    intro:
-      'No catalogue renders and no stock photography: these are our cars, as you '
-      + 'will collect them, with Bihać plates and our shopfront behind them. If '
-      + 'you are not sure what you need, tell us how many people and how much '
-      + 'luggage, and we will suggest one.',
-    book: 'Check availability',
-    bookMessage: 'Hello! I would like to enquire about the {car}.',
+    eyebrow: 'Cars',
+    title: 'Choose the car for your trip',
+    intro: 'Six cars, each for a different occasion — driving around town, a business trip to Banja Luka or a family holiday.',
+    filters: { all: 'All cars', automatic: 'Automatic', manual: 'Manual' },
+    automatic: 'Automatic',
+    manual: 'Manual',
     seats: '{n} seats',
-    seatsUnknown: 'Seats on request',
-    transmissionUnknown: 'Transmission on request',
-    all: 'All cars',
-    railHint: 'Swipe for more cars',
-    categories: {
-      all: 'All cars',
-      city: 'City',
-      estate: 'Estate',
-      suv: 'SUV',
-      van: 'Minibus',
-      sport: 'Sport',
-      business: 'Business',
+    year: 'Year',
+    book: 'Book',
+    details: 'Details',
+    categories: { compact: 'Compact', family: 'Family', suv: 'SUV' },
+    audience: {
+      'peugeot-308': 'An automatic for relaxed driving in town and on the main road — ideal if you would rather not shift gears.',
+      'peugeot-5008': 'A roomy family automatic with plenty of luggage space — for holidays, airport runs and long distances.',
+      'ford-kuga': 'An automatic SUV with a higher seat — comfortable on Kozara’s mountain roads and on long journeys.',
+      'golf-7': 'The proven classic that practically drives itself — for work, town and everyday errands.',
+      'mazda-5': 'Seven seats and sliding doors — the whole family and the luggage in one car.',
+      'golf-6': 'Easy to drive and easy to park — the smart choice for a short rental.',
     },
-    specs: {
-      comfort: 'Comfortable',
-      longTrips: 'Good for long drives',
-      business: 'Business travel',
-      luggage: 'Large boot',
-      family: 'Family friendly',
-      group: 'For groups',
-      transfer: 'Transfers',
-      sport: 'Lively to drive',
-      economy: 'Low fuel use',
-      cityDrive: 'Easy in town',
-      easyParking: 'Easy to park',
-      highSeat: 'Raised seating position',
-    },
-    imageAlt: '{name} ({colour}) outside the Rent a Car Gogo office in Bihać',
+    imageAlt: '{car} — Rent a Car Beganović, Prijedor',
   },
-
-  steps: {
-    eyebrow: 'How it works',
-    title: 'From the first call to handing the keys back',
-    intro: 'Five steps, with no surprises in between.',
-    items: [
+  story: {
+    eyebrow: 'Who we are',
+    title: 'Renting a car should be simple',
+    paragraphs: [
+      'At Rent a Car Beganović we believe renting a car should be quick, clear and free of hidden costs. That is why we tell you the price up front, hand over the car clean and ready, and stay on the phone for the whole rental.',
+      'We are on the M4 main road in Brđani — a few minutes from Kozarac, about a quarter of an hour from central Prijedor, and on the way to Banja Luka and Kozara National Park. Whether you are here on business, coming home from abroad or your own car is in the garage, we have a car that fits your trip.',
+    ],
+    stats: [
+      { value: '6', label: 'cars in the fleet' },
+      { value: '3', label: 'automatics' },
+      { value: '7', label: 'seats in the Mazda 5' },
+      { value: 'M4', label: 'right on the main road' },
+    ],
+    imageAlt: 'Prijedor, the river and a church tower at sunset',
+  },
+  service: {
+    eyebrow: 'Our service',
+    title: 'Everything to know before and during your rental',
+    intro: 'From the first enquiry to handing back the keys — this is how renting with us works, step by step.',
+    tabs: [
       {
-        label: 'Before you book',
-        body:
-          'Tell us the dates, how many of you there are, and where you want to '
-          + 'collect the car. We suggest a vehicle and give you the total price — '
-          + 'not a daily rate that grows later. If you plan to leave Bosnia and '
-          + 'Herzegovina, say so straight away, because that needs extra '
-          + 'paperwork.',
+        label: 'Before',
+        title: 'Choose the car and the dates',
+        body: 'Tell us when you need a car, how many of you are travelling and where you are going. We will suggest the car that suits your trip — not the most expensive one, the right one.',
+        points: ['Automatic or manual', 'Compact, family or SUV', 'Short and long rentals by arrangement'],
       },
       {
         label: 'Booking',
-        body:
-          'You confirm by call, message or WhatsApp. We do not ask for a credit '
-          + 'card number and we charge nothing in advance. A name, a phone number '
-          + 'and the dates are enough.',
+        title: 'Enquire in two minutes',
+        body: 'Send an enquiry through the form, on WhatsApp or simply call. We confirm availability and the total price, and the booking only stands once you confirm it.',
+        points: ['Website form, WhatsApp or phone', 'Total price before you confirm', 'No obligation until you confirm'],
       },
       {
-        label: 'Collection',
-        body:
-          'Collect from us at Dr. Irfana Ljubijankića 139 in Bihać, or we deliver '
-          + 'to an agreed address. We check the car over together and record its '
-          + 'condition, you sign the contract, leave the 400 KM deposit and pay '
-          + 'for the hire — in cash.',
+        label: 'Pick-up',
+        title: 'Keys on the M4 in Brđani',
+        body: 'You collect the car at our address, with a short walk-round check together. Bring your ID card or passport and a valid driving licence.',
+        points: ['ID card or passport', 'Valid driving licence', 'Joint vehicle check'],
       },
       {
-        label: 'During the hire',
-        body:
-          'The number you call belongs to the same person who handed you the '
-          + 'keys. If anything happens — breakdown, tyre, accident — call us '
-          + 'before you call anyone else. To extend, let us know a day ahead if '
-          + 'you can.',
+        label: 'During',
+        title: 'We are here if you need us',
+        body: 'If anything surprises you on the road — a warning light, a tyre or a question about the car — call or message us on WhatsApp. We answer and sort it out together.',
+        points: ['Reachable by phone and WhatsApp', 'Help with any question', 'Extensions by arrangement'],
       },
       {
         label: 'Return',
-        body:
-          'Return the car where you collected it, or to an agreed place. We look '
-          + 'it over together, and if it is undamaged and in the condition you '
-          + 'took it, the 400 KM deposit comes back in full, on the spot.',
+        title: 'Bring it back, done',
+        body: 'Return the car to the same address at the agreed time. We look it over together and you are done — no waiting, no fuss.',
+        points: ['Same address, agreed time', 'Short joint check', 'Running late? Just let us know'],
+      },
+      {
+        label: 'Questions',
+        title: 'More questions?',
+        body: 'Detailed rental terms are on the Terms page, and answers to common questions are further down this page. For anything else, one call is enough.',
+        points: ['Rental terms', 'Frequently asked questions', 'Phone or WhatsApp'],
       },
     ],
   },
-
-  locations: {
-    title: 'Wherever your trip starts',
-    intro:
-      'Our office is on the main road through Bihać, near the City Centar, with '
-      + 'parking outside. But you do not have to come to us — usually we come to '
-      + 'you.',
+  routes: {
+    eyebrow: 'Location',
+    title: 'From Brđani you are quickly wherever you are going',
+    intro: 'Our office is on the M4 main road, so there is no driving through the town centre. Approximate driving times from us:',
     items: [
-      {
-        title: 'At our office in Bihać',
-        body:
-          'Dr. Irfana Ljubijankića 139, in the parade of shops with the butcher, '
-          + 'near the City Centar. On the main road, easy to find, somewhere to '
-          + 'park.',
-        meta: 'City Centar',
-      },
-      {
-        title: 'To your address or hotel',
-        body:
-          'We deliver to an address in Bihać and the surrounding area at an '
-          + 'agreed time. The same goes for the return — no trip to the office '
-          + 'needed.',
-        meta: 'Bihać and around',
-      },
-      {
-        title: 'To the airport you land at',
-        body:
-          'Bihać has no airport. The nearest are Zadar, about 150 km and two and '
-          + 'a half hours away, and Zagreb, about 165 km and a little under three '
-          + 'hours. We can meet you at either — send us the flight number.',
-        meta: 'Zagreb · Zadar',
-      },
-      {
-        title: 'Towards the border and beyond',
-        body:
-          'The Izačić crossing is 13 kilometres away, about 25 minutes. If you '
-          + 'plan to cross into Croatia, tell us before you book so we can '
-          + 'prepare the green card and written permission to take the car out.',
-        meta: '13 km to the border',
-      },
+      { place: 'Kozarac', note: 'The nearest village, right next to us', km: 4, time: '10 min' },
+      { place: 'Kozara NP — Mrakovica', note: 'Forests, viewpoints and trails', km: 16, time: '25 min' },
+      { place: 'Prijedor centre', note: 'The town on the Sana river', km: 15, time: '20 min' },
+      { place: 'Banja Luka', note: 'The largest city in the region', km: 42, time: '45 min' },
+      { place: 'Banja Luka Airport', note: 'The nearest airport', km: 56, time: '1 h 5 min' },
+      { place: 'Sanski Most', note: 'The Sana and Dabar spring', km: 46, time: '55 min' },
+      { place: 'Novi Grad — border', note: 'Crossing into Croatia', km: 59, time: '1 h 10 min' },
+      { place: 'Zagreb Airport', note: 'Flights from all over Europe', km: 169, time: '2 h 25 min' },
     ],
-    mapsLink: 'Open in Google Maps',
-    addressNote: 'Opening hours: Monday – Saturday, 08:00 – 18:00',
+    mapCta: 'Open in Google Maps',
+    addressLabel: 'Our address',
   },
-
-  why: {
-    eyebrow: 'Why us',
-    title: 'A small agency, on purpose',
-    intro:
-      'No call centre, no queue at a desk, no six-page contract. Eleven cars and '
-      + 'people who know them.',
-    items: [
-      {
-        title: 'One person, from the call to the keys',
-        body:
-          'Whoever answers the phone is the person who hands you the car and '
-          + 'takes it back. You will not explain your situation to a third agent.',
-      },
-      {
-        title: 'The price you are quoted is the price you pay',
-        body:
-          'We agree the total before you book. No booking fee, no contract '
-          + 'administration charge, no line items that appear at the end.',
-      },
-      {
-        title: 'We know the roads you are hiring for',
-        body:
-          'The Una, Plitvice, Štrbački buk, the road to the coast and the road to '
-          + 'Zagreb — these are drives we make ourselves. Ask us before you set '
-          + 'off.',
-      },
-      {
-        title: 'Cars ready for the road',
-        body:
-          'Serviced and cleaned before every hire. We record the condition '
-          + 'together with you at collection, so there is nothing to argue about '
-          + 'at the return.',
-      },
+  diaspora: {
+    title: 'Coming home for the summer?',
+    body: 'Every summer Kozarac and Prijedor come alive with our people from Austria, Germany, Sweden, Switzerland and the US. If you are not driving your own car down, book ours early — summer dates fill up fast.',
+    points: [
+      'Book ahead from abroad',
+      'Website and enquiry in English and German',
+      'Arrange it on WhatsApp, no expensive calls',
     ],
+    cta: 'Book for the summer',
   },
-
-  driver: {
-    title: 'Drive yourself, or take one of our drivers',
-    intro:
-      'Both are available. Which one suits usually depends on whether the trip is '
-      + 'work or a holiday.',
-    withDriver: {
-      title: 'With a driver',
-      body:
-        'For airport transfers, business arrivals and groups who would rather not '
-        + 'think about parking, borders and unfamiliar roads.',
-      points: [
-        'Transfers from Zagreb and Zadar airports',
-        'Business meetings and full-day bookings',
-        'Groups and family trips by minibus',
-        'A driver who knows the local roads and the crossings',
-      ],
-    },
-    selfDrive: {
-      title: 'Without a driver',
-      body:
-        'Standard hire: take the keys and drive yourself, at your own pace and to '
-        + 'your own plan.',
-      points: [
-        '400 KM deposit, refunded in full',
-        'No credit card',
-        'Delivery to an agreed place',
-        'Travel abroad possible if arranged in advance',
-      ],
-    },
-    cta: 'Arrange a driver',
-  },
-
   faq: {
-    title: 'What people ask before every booking',
-    intro: 'If your question is not here, call — it is quicker than you think.',
+    eyebrow: 'FAQ',
+    title: 'The questions we hear most',
     items: [
       {
-        q: 'Do I need a credit card to book?',
-        a:
-          'No. You confirm by call or message, with no card number. You pay for '
-          + 'the hire in cash when you collect the car.',
+        q: 'How do I book a car?',
+        a: 'Send an enquiry through the form at the top of the page, write on WhatsApp or call +387 62 269 229. We confirm availability and the total price, and the booking stands once you confirm it.',
       },
       {
-        q: 'How much is the deposit and when do I get it back?',
-        a:
-          'The deposit is 400 KM, or €200. It comes back in full the moment you '
-          + 'return the car, provided it is undamaged and in the condition you '
-          + 'took it.',
+        q: 'What documents do I need?',
+        a: 'An ID card or passport and a valid driving licence. The full rental terms are published on the Terms page, and we are happy to explain them by phone.',
       },
       {
-        q: 'Can you bring the car to my address?',
-        a:
-          'Yes, but only by prior arrangement. We deliver to addresses in Bihać '
-          + 'and the surrounding area, to hotels, or we meet you at Zagreb or '
-          + 'Zadar airport. Tell us the place and time before you book; for '
-          + 'delivery outside Bihać we agree the terms at the same time.',
+        q: 'Do you have automatic cars?',
+        a: 'Yes. The Peugeot 308, Peugeot 5008 and Ford Kuga are automatics. The Golf 7, Golf 6 and Mazda 5 are manual.',
       },
       {
-        q: 'How do I pay?',
-        a:
-          'In cash, when you collect the car. You know the total '
-          + 'before you confirm the booking.',
+        q: 'Do you have a car for seven people?',
+        a: 'The Mazda 5 has seven seats and sliding doors. For family trips also look at the Peugeot 5008 — ask us about its seating.',
       },
       {
-        q: 'Can I take the car into Croatia?',
-        a:
-          'Taking the car out of Bosnia and Herzegovina is possible, but it is '
-          + 'arranged in advance — we prepare a green card and written '
-          + 'permission. Tell us your destination before you book, not on the day '
-          + 'of collection. The Izačić crossing is 13 kilometres from us.',
+        q: 'Where do I pick up the car?',
+        a: 'At our address: M4 main road, Brđani, near Kozarac (79101 Prijedor). You will find the exact location on Google Maps.',
       },
       {
-        q: 'What are your opening hours?',
-        a:
-          'The office is open 08:00 to 18:00. Collection and return outside those '
-          + 'hours can be arranged — just let us know in advance.',
-      },
-      {
-        q: 'What if I break down or get a puncture?',
-        a:
-          'Call us before you call anyone else, on the same number you booked on. '
-          + 'Depending on where you are and what has happened, we will arrange a '
-          + 'replacement car or roadside assistance.',
-      },
-      {
-        q: 'Where exactly are you?',
-        a:
-          'Dr. Irfana Ljubijankića 139 in Bihać, near the City Centar, on '
-          + 'the main road in the parade of shops. There is parking outside.',
+        q: 'Can I rent a car for a longer period?',
+        a: 'Yes, short and long rentals are arranged individually. Put your dates in the enquiry and we will quote for the whole period.',
       },
     ],
   },
-
   blog: {
-    eyebrow: 'Guides',
-    title: 'Before you set off',
-    intro:
-      'Short pieces on what we get asked most: what to bring to the handover, and '
-      + 'where it is worth driving from Bihać.',
-    readMore: 'Read the guide',
-    backToBlog: 'Back to guides',
+    eyebrow: 'Blog',
+    title: 'Tips for the road',
+    intro: 'Practical guides to renting a car in Prijedor and day trips nearby.',
+    readMore: 'Read',
+    backToBlog: 'Back to blog',
     published: 'Published',
     readingTime: '{n} min read',
-    allPosts: 'All guides',
-    ctaTitle: 'Ready to go?',
-    ctaBody:
-      'Send us your dates and how many of you there are. We will suggest a car '
-      + 'and a price the same day.',
+    ctaTitle: 'Need a car for this trip?',
+    ctaBody: 'Send your dates — we confirm availability and the total price before you commit.',
   },
-
-  contact: {
-    title: 'Get in touch',
-    intro:
-      'Phone or WhatsApp is quickest. If you would rather write, fill in the form '
-      + 'and we will call you back.',
-    callTitle: 'Call us',
-    callBody: 'Weekdays 08:00 to 18:00',
+  cta: {
+    title: 'Your car is waiting on the M4.',
+    body: 'Call, send a message or an enquiry — it takes a couple of minutes to arrange.',
+    whatsapp: 'Message on WhatsApp',
+  },
+  about: {
+    metaTitle: 'About us | Rent a Car Beganović, Prijedor',
+    metaDescription:
+      'Rent a Car Beganović is a local car rental agency on the M4 main road in Brđani near Kozarac, Prijedor. '
+      + 'Six cars, a clear price up front and direct contact.',
+    title: 'A local agency, a straight deal',
+    lead: 'Rent a Car Beganović is a car rental agency from Prijedor. We keep it simple: the right car, an honest price up front, and people you talk to directly.',
+    sections: [
+      {
+        title: 'Who we are',
+        body: 'We are a small local agency, and that is our advantage. We know every car in our fleet and arrange every rental personally — no call centre, no five-page forms and no hidden items on the bill.',
+      },
+      {
+        title: 'Where we are',
+        body: 'We are on the M4 main road in Brđani, a few minutes from Kozarac and about a quarter of an hour from central Prijedor. The office sits right on the main road towards Banja Luka, so once you have the keys you are on your way — no driving through town.',
+      },
+      {
+        title: 'Who we rent to',
+        body: 'People in Prijedor on business, our diaspora coming home for the summer, families going on holiday and anyone whose own car is in the garage. We have compact cars, two family cars and an SUV — with automatic and manual gearboxes.',
+      },
+    ],
+    valuesTitle: 'What matters to us',
+    values: [
+      { title: 'A clear price', body: 'You know the total before you confirm. No surprises afterwards.' },
+      { title: 'A car that is ready', body: 'You get the car clean, checked and ready for the road.' },
+      { title: 'Reachable', body: 'During the rental we are on the phone and WhatsApp whenever you need us.' },
+    ],
+  },
+  terms: {
+    metaTitle: 'Rental terms | Rent a Car Beganović, Prijedor',
+    metaDescription: 'Rental terms at Rent a Car Beganović in Prijedor: documents, pick-up and return of the car.',
+    title: 'Rental terms',
+    lead: 'Clear rules make renting easy for both sides. Here you will find what matters before you collect the keys.',
+    pendingTitle: 'Full terms coming soon',
+    pendingBody: 'The detailed rental terms (deposit, driver age, mileage, fuel, taking the car abroad) will be published soon. Until then, call us or write on WhatsApp — we will explain everything before you book.',
+    basicsTitle: 'The basics',
+    basics: [
+      'To collect the car you need an ID card or passport and a valid driving licence.',
+      'A booking is valid once you confirm it, after we have told you the total price.',
+      'The car is collected and returned at our address: M4, Brđani, 79101 Prijedor.',
+      'We check the car together at pick-up and at return.',
+    ],
+  },
+  contactPage: {
+    metaTitle: 'Contact | Rent a Car Beganović, Prijedor — +387 62 269 229',
+    metaDescription: 'Contact Rent a Car Beganović: phone and WhatsApp +387 62 269 229, address M4, Brđani, 79101 Prijedor. Send a car rental enquiry.',
+    title: 'Get in touch, it is quick',
+    lead: 'The fastest way to reach us is by phone or WhatsApp. To book, you can also send an enquiry through the form.',
+    callTitle: 'Phone',
     whatsappTitle: 'WhatsApp',
-    whatsappBody: 'Send your dates and passenger count — we reply by message',
+    whatsappBody: 'Send a message, we reply quickly.',
     addressTitle: 'Address',
-    hoursTitle: 'Opening hours',
-    hoursNote: 'Collection outside opening hours can be arranged in advance.',
-    formTitle: 'Send an enquiry',
-    formNote: 'We reply during opening hours. An enquiry commits you to nothing.',
-    name: 'Name',
-    namePlaceholder: 'Your name',
-    phone: 'Phone',
-    phonePlaceholder: '+44 …',
-    pickup: 'Pick-up point',
-    pickupPlaceholder: 'Bihać, hotel, airport…',
-    message: 'Message',
-    messagePlaceholder:
-      'Dates, how many passengers, how much luggage, and whether you plan to '
-      + 'leave the country.',
-    submit: 'Send enquiry',
-    sending: 'Sending…',
-    sent: 'Thank you — we will be in touch shortly.',
-    errorRequired: 'Please enter your name and phone number.',
-    errorSend: 'Could not send. Please call us or message on WhatsApp.',
-    whatsappAlt: 'Rather use WhatsApp',
+    directions: 'Directions on Google Maps',
+    formTitle: 'Send a rental enquiry',
   },
-
+  vehicle: {
+    metaTitle: '{car} {year}, {gearbox} — car rental Prijedor | Beganović',
+    metaDescription:
+      'Rent a {car} ({year}, {gearbox}) in Prijedor, Bosnia. Pick-up on the M4 in Brđani near Kozarac. '
+      + 'Send an enquiry and get the total price up front.',
+    specsTitle: 'Key facts',
+    spec: {
+      brand: 'Make and model',
+      year: 'Year',
+      transmission: 'Gearbox',
+      seats: 'Seats',
+      category: 'Category',
+      unknown: 'On request',
+    },
+    audienceTitle: 'Who this car is for',
+    priceTitle: 'Price',
+    priceBody: 'The price depends on the rental period and the season. Send your dates and we will tell you the exact amount before you confirm anything.',
+    similarTitle: 'You might also like',
+    backToFleet: 'All cars',
+  },
   footer: {
-    tagline:
-      'Car hire in Bihać — no credit card, and a deposit you actually get back.',
+    tagline: 'Car rental in Prijedor — automatic and manual cars, right on the M4 main road in Brđani.',
     navigation: 'Pages',
     contact: 'Contact',
-    followUs: 'Follow us',
     rights: 'All rights reserved.',
     footerNav: 'Footer navigation',
-    note:
-      'Bihać has no airport — we bring the car to your address, your hotel, or to '
-      + 'Zagreb and Zadar airports, by prior arrangement.',
+    langs: 'Language',
   },
-
-  whatsappFab: 'WhatsApp',
-  callFab: 'Call',
-  hours: 'Monday – Saturday, 08:00 – 18:00',
-  hoursShort: '08:00 – 18:00',
+  whatsappFab: 'Message us on WhatsApp',
   skipToContent: 'Skip to content',
   breadcrumbHome: 'Home',
+  notFound: {
+    title: 'This page took a wrong turn',
+    body: 'The page you are looking for does not exist or has moved.',
+    cta: 'Back to home',
+  },
 }

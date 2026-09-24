@@ -5,31 +5,28 @@
 @tailwind utilities;
 
 /*
- * Page Theme Lock: this site is dark, top to bottom. Sections vary only within
- * the ink ladder (ink-950 / ink-900 / ink-850). There are no light sections.
- * Lime appears on interactive surfaces, on one accent word per headline, and
- * on hairlines — never as a section background, because a full-bleed lime band
- * would take the one colour that means "press this" and spend it on decoration.
+ * Theme: light. Paper ground, navy type, orange for the action that matters
+ * (call / send the enquiry) and for one accent phrase per headline. Navy is
+ * used for two full-bleed bands only — the closing CTA and the footer — so the
+ * page ends on the logo's dark.
  */
 
 @layer base {
   html {
     @apply scroll-smooth antialiased;
-    scroll-padding-top: 5.5rem; /* clears the sticky header on anchor jumps */
-    /* The overscroll gutter above the header and below the footer, which would
-     * otherwise flash white on iOS and on a trackpad bounce. */
-    background-color: theme('colors.ink.950');
-    color-scheme: dark;
+    scroll-padding-top: 6rem;
+    background-color: theme('colors.paper.50');
+    color-scheme: light;
   }
 
   body {
-    @apply bg-ink-950 font-sans text-mist-400;
+    @apply bg-paper-50 font-sans text-navy-500;
   }
 
   h1,
   h2,
   h3 {
-    @apply font-display text-mist-0;
+    @apply font-display text-navy-950;
     text-wrap: balance;
   }
 
@@ -38,125 +35,122 @@
   }
 
   ::selection {
-    @apply bg-lime-400/25 text-mist-0;
+    @apply bg-flame-200 text-navy-950;
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-lime-400 ring-offset-2 ring-offset-ink-950;
-  }
-
-  /*
-   * Form controls inherit the dark ground rather than the UA's white. Set here
-   * rather than per-input so a field added later cannot come out light.
-   */
-  input,
-  textarea,
-  select {
-    @apply bg-transparent text-mist-0;
+    @apply outline-none ring-2 ring-flame-500 ring-offset-2 ring-offset-paper-50;
   }
 
   input::placeholder,
   textarea::placeholder {
-    @apply text-mist-600;
+    @apply text-navy-400;
+  }
+
+  /* Arabic has no expanded width; the stretch would only fall back oddly. */
+  [dir='rtl'] h1,
+  [dir='rtl'] h2,
+  [dir='rtl'] h3 {
+    font-stretch: 100% !important;
+    letter-spacing: 0 !important;
   }
 }
 
 @layer components {
   .shell {
-    @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-12;
+    @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-10;
   }
 
   .section-y {
     @apply py-20 md:py-28;
   }
 
-  /* ---- Type scale ------------------------------------------------------- */
+  /* ---- Type ------------------------------------------------------------- */
 
   .h-display {
-    @apply font-display text-[2.6rem] font-semibold leading-[1.03] tracking-[-0.02em] text-mist-0 sm:text-5xl md:text-6xl lg:text-[4.25rem];
+    @apply font-display text-[2.5rem] font-extrabold uppercase leading-[0.98] tracking-[-0.015em] text-navy-950 sm:text-5xl lg:text-[4.1rem];
+    font-stretch: 112%;
   }
 
   .h-section {
-    @apply font-display text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-mist-0 md:text-4xl lg:text-[2.75rem];
+    @apply font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-0.015em] text-navy-950 md:text-[2.6rem];
+    font-stretch: 108%;
   }
 
   .h-card {
-    @apply font-display text-xl font-semibold leading-snug tracking-[-0.01em] text-mist-0;
+    @apply font-display text-xl font-bold leading-snug text-navy-950;
+    font-stretch: 104%;
   }
 
   .body-lg {
-    @apply text-base leading-relaxed text-mist-400 md:text-lg;
+    @apply text-[1.0625rem] leading-relaxed text-navy-500 md:text-lg;
   }
 
   .body-base {
-    @apply text-[0.9375rem] leading-relaxed text-mist-500;
+    @apply text-[0.9375rem] leading-relaxed text-navy-500;
   }
 
   /*
-   * Section eyebrow. Budget: max 1 per 3 sections, enforced in index.vue.
-   * lime-400 clears 10:1 on ink, so unlike the light theme it stays readable
-   * at 11px without dropping to a darker step.
+   * Eyebrow: a short orange speed-bar, lifted from the bar cut into the "B"
+   * of the wordmark, then tracked caps.
    */
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-lime-400;
+    @apply inline-flex items-center gap-2.5 text-[0.75rem] font-bold uppercase tracking-[0.18em] text-flame-700;
   }
 
   .eyebrow::before {
     content: '';
-    @apply h-px w-6 bg-lime-400/50;
+    @apply h-[3px] w-7 rounded-pill bg-gradient-to-r from-flame-500 to-sun;
+  }
+
+  .on-dark .eyebrow {
+    @apply text-flame-300;
   }
 
   /* ---- Surfaces --------------------------------------------------------- */
 
   .surface {
-    @apply rounded-card border border-ink-700 bg-ink-850 shadow-card;
+    @apply rounded-card border border-paper-200 bg-paper-0 shadow-card;
   }
 
-  /*
-   * Hover is gated behind a real pointer: on a phone :hover latches on tap and
-   * the card stays lifted until something else is touched.
-   */
   .surface-hover {
-    @apply transition-[transform,border-color,box-shadow] duration-300 ease-out;
+    @apply transition-[transform,box-shadow,border-color] duration-300 ease-out;
   }
 
   @media (hover: hover) and (pointer: fine) {
     .surface-hover:hover {
-      @apply -translate-y-1 border-ink-600 shadow-lift;
+      @apply -translate-y-1 border-paper-300 shadow-lift;
     }
   }
 
-  /* The field style, shared by the hero card and the long enquiry form. */
   .field {
-    @apply h-12 w-full rounded-[0.625rem] border border-ink-700 bg-ink-900 px-4 text-[0.9375rem] text-mist-0 transition-[border-color,background-color,box-shadow] duration-200 ease-out;
+    @apply h-12 w-full rounded-xl border border-paper-200 bg-paper-50 px-4 text-[0.9375rem] text-navy-950 transition-[border-color,background-color,box-shadow] duration-200 ease-out;
   }
 
   .field:hover {
-    @apply border-ink-600;
+    @apply border-paper-300;
   }
 
   .field:focus {
-    @apply border-lime-400 bg-ink-850 outline-none ring-0;
-    box-shadow: 0 0 0 3px rgb(163 201 63 / 0.15);
+    @apply border-flame-500 bg-paper-0 outline-none ring-0;
+    box-shadow: 0 0 0 4px rgb(247 107 14 / 0.14);
+  }
+
+  .field[aria-invalid='true'] {
+    @apply border-red-500;
   }
 
   .field-label {
-    @apply mb-1.5 block text-[0.8125rem] font-medium text-mist-200;
+    @apply mb-1.5 block text-[0.8125rem] font-semibold text-navy-700;
   }
 
   /* ---- Scroll reveal ---------------------------------------------------- */
-  /*
-   * One system: a `.reveal-group` gets `.is-in` from an IntersectionObserver,
-   * and its `.reveal*` children transition in on an index-driven delay.
-   * Delays stay inside 30-80ms per item; longer and the page feels like it is
-   * loading rather than arriving.
-   */
 
   .reveal {
     @apply translate-y-6 opacity-0;
     transition:
-      opacity 0.65s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
-      transform 0.65s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
+      opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
+      transform 0.7s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
   }
 
   .reveal-group.is-in .reveal {
@@ -164,58 +158,46 @@
   }
 
   .reveal-x {
-    @apply translate-x-8 opacity-0;
+    @apply translate-x-10 opacity-0;
     transition:
-      opacity 0.75s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
-      transform 0.75s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
+      opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
+      transform 0.8s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
+  }
+
+  [dir='rtl'] .reveal-x {
+    @apply -translate-x-10;
   }
 
   .reveal-group.is-in .reveal-x {
     @apply translate-x-0 opacity-100;
   }
 
-  /*
-   * Never scale(0): nothing in the physical world appears out of nothing, and
-   * an element that grows from a point reads as a glitch rather than as an
-   * arrival. 0.97 is enough to register as motion.
-   */
   .reveal-scale {
-    @apply scale-[0.97] opacity-0;
+    @apply scale-[0.96] opacity-0;
     transition:
-      opacity 0.75s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
-      transform 0.75s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
+      opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
+      transform 0.8s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
   }
 
   .reveal-group.is-in .reveal-scale {
     @apply scale-100 opacity-100;
   }
 
-  /* ---- Above the fold: reveal without waiting on JS ---------------------- */
   /*
-   * The rules above hold `.reveal` at opacity 0 until an IntersectionObserver
-   * adds `.is-in`, and that observer only runs after hydration. For a section
-   * already on screen that makes LCP equal to "when the JS finished parsing"
-   * rather than "when the image decoded".
-   *
-   * So the first section of every page uses `.reveal-onload`: the same motion,
-   * driven by a CSS animation that starts at first paint and needs no JS.
+   * Above the fold: the same motion from a CSS animation that starts at first
+   * paint, so LCP never waits on hydration.
    */
-
   .reveal-onload .reveal {
-    animation: reveal-rise 0.65s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms) both;
+    animation: reveal-rise 0.7s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms) both;
   }
 
   .reveal-onload .reveal-scale {
-    animation: reveal-pop 0.75s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms) both;
+    animation: reveal-pop 0.8s cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms) both;
   }
 
-  /*
-   * The LCP element itself. Transform only, opacity pinned at 1: Chrome does
-   * not record a largest-paint for anything still at opacity 0, so fading the
-   * hero image in would push LCP out by the whole delay plus the fade.
-   */
+  /* LCP image: transform only — Chrome ignores paints at opacity 0. */
   .reveal-lcp {
-    animation: reveal-lift 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation: reveal-drive 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.15s both;
   }
 
   @keyframes reveal-rise {
@@ -224,124 +206,96 @@
   }
 
   @keyframes reveal-pop {
-    from { opacity: 0; transform: scale(0.97); }
+    from { opacity: 0; transform: scale(0.96); }
     to { opacity: 1; transform: none; }
   }
 
-  @keyframes reveal-lift {
-    from { transform: translateY(1.25rem); }
+  /* The line-up rolls in from the side, like cars pulling into frame. */
+  @keyframes reveal-drive {
+    from { transform: translateX(-3%) scale(1.04); }
     to { transform: none; }
   }
 
-  /* ---- Fleet rail ------------------------------------------------------- */
-
-  .rail {
-    @apply flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4;
-    scrollbar-width: thin;
-    scrollbar-color: #2a3220 transparent;
+  /* ---- The swoosh --------------------------------------------------------- */
+  /*
+   * The orange road-curve from the logo, drawn under the accent phrase of a
+   * headline. An SVG path with pathLength="1" so the dash maths is unitless.
+   */
+  .swoosh path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: swoosh-draw 1.1s cubic-bezier(0.77, 0, 0.175, 1) var(--swoosh-delay, 0.5s) forwards;
   }
 
-  .rail::-webkit-scrollbar {
-    height: 6px;
+  .reveal-group:not(.is-in) .swoosh-scroll path {
+    animation-play-state: paused;
   }
 
-  .rail::-webkit-scrollbar-track {
-    @apply bg-ink-900;
-    border-radius: 999px;
+  @keyframes swoosh-draw {
+    to { stroke-dashoffset: 0; }
   }
 
-  .rail::-webkit-scrollbar-thumb {
-    @apply bg-ink-700;
-    border-radius: 999px;
+  /* ---- Buttons: travelling shine on the primary --------------------------- */
+  .btn-shine {
+    @apply relative overflow-hidden;
   }
 
-  .rail::-webkit-scrollbar-thumb:hover {
-    @apply bg-lime-400;
+  .btn-shine::after {
+    content: '';
+    @apply pointer-events-none absolute inset-y-0 start-0 w-1/3 bg-gradient-to-r from-transparent via-white/45 to-transparent;
+    transform: translateX(-120%) skewX(-20deg);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-shine:hover::after {
+      animation: shine 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+
+  @keyframes shine {
+    from { transform: translateX(-120%) skewX(-20deg); }
+    to { transform: translateX(360%) skewX(-20deg); }
   }
 }
 
 @layer utilities {
-  /*
-   * The scrim under captions laid over a photograph. Dark here, unlike the
-   * light build: every fleet image is a daylight phone photo of a car outside
-   * the office, so the type over it has to be white and the ground under it
-   * has to come down to meet the page.
-   */
-  .scrim-b {
-    background: linear-gradient(
-      to top,
-      rgb(8 10 6 / 0.96) 0%,
-      rgb(8 10 6 / 0.78) 32%,
-      rgb(8 10 6 / 0.28) 66%,
-      rgb(8 10 6 / 0) 100%
-    );
+  /* Warm sunrise wash behind the hero, the logo's arc as light. */
+  .sun-glow {
+    background:
+      radial-gradient(60% 70% at 85% 0%, rgb(249 166 32 / 0.22) 0%, transparent 60%),
+      radial-gradient(45% 55% at 100% 30%, rgb(247 107 14 / 0.16) 0%, transparent 65%);
   }
 
-  .scrim-full {
-    background: linear-gradient(
-      to bottom,
-      rgb(8 10 6 / 0.35) 0%,
-      rgb(8 10 6 / 0.6) 45%,
-      rgb(8 10 6 / 0.94) 100%
-    );
+  .text-gradient-flame {
+    @apply bg-gradient-to-r from-flame-600 via-flame-500 to-sun bg-clip-text text-transparent;
   }
 
-  /*
-   * Hairline rule with the brand's speed-line sweep travelling along it. Used
-   * under section headings, once per section.
-   */
-  .rule-sweep {
-    @apply relative h-px w-full overflow-hidden bg-ink-700;
+  /* Dot grid, used sparingly behind the story block. */
+  .dot-grid {
+    background-image: radial-gradient(rgb(7 16 28 / 0.09) 1px, transparent 1px);
+    background-size: 18px 18px;
   }
 
-  .rule-sweep::after {
-    content: '';
-    @apply absolute inset-y-0 w-1/4 bg-gradient-to-r from-transparent via-lime-400 to-transparent;
-    animation: sweep 5.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   }
 
-  /*
-   * Scroll-driven parallax, native CSS where supported.
-   * No scroll listeners anywhere in this project.
-   */
+  /* Native scroll-driven parallax where supported; no scroll listeners. */
   @supports (animation-timeline: view()) {
     @media (prefers-reduced-motion: no-preference) {
       .parallax-slow {
         animation: parallax-rise linear both;
         animation-timeline: view();
-        animation-range: entry 10% exit 90%;
+        animation-range: entry 0% exit 100%;
       }
     }
   }
 
   @keyframes parallax-rise {
-    from { transform: translate3d(0, 2.5%, 0); }
-    to { transform: translate3d(0, -2.5%, 0); }
+    from { transform: translate3d(0, 6%, 0) scale(1.08); }
+    to { transform: translate3d(0, -6%, 0) scale(1.08); }
   }
 
-  /* Slow ambient push-in on the hero photograph. */
-  @media (prefers-reduced-motion: no-preference) {
-    .ken-burns {
-      animation: ken-burns 28s ease-in-out infinite alternate;
-      will-change: transform;
-    }
-  }
-
-  @keyframes ken-burns {
-    from { transform: scale(1) translate3d(0, 0, 0); }
-    to { transform: scale(1.07) translate3d(0, -1.2%, 0); }
-  }
-
-  /* Fixed grain, pointer-events-none, never on a scrolling container. */
-  .grain {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  }
-
-  /*
-   * Reduced motion means fewer and gentler animations, not none: the opacity
-   * transitions that explain what arrived when are kept, and everything that
-   * moves in space is dropped.
-   */
   @media (prefers-reduced-motion: reduce) {
     .reveal,
     .reveal-x,
@@ -352,13 +306,17 @@
       animation: none !important;
     }
 
-    .ken-burns,
-    .parallax-slow,
-    .animate-sweep,
-    .animate-pulse-ring,
-    .rule-sweep::after {
+    .swoosh path {
+      stroke-dashoffset: 0;
       animation: none !important;
-      transform: none !important;
+    }
+
+    .animate-marquee,
+    .animate-pulse-ring,
+    .animate-sun-spin,
+    .parallax-slow,
+    .btn-shine::after {
+      animation: none !important;
     }
 
     html {
