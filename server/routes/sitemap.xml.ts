@@ -1,5 +1,5 @@
 import { BLOG_POSTS } from '../../app/data/blog'
-import { FLEET_CARS, TERMS_COMPLETE } from '../../app/data/business'
+import { FLEET_CARS, TERMS_COMPLETE, TRANSPORT_LIVE } from '../../app/data/business'
 import { DEFAULT_LOCALE, localePath, localesForPath } from '../../app/i18n/routing'
 
 /*
@@ -31,6 +31,8 @@ export default defineEventHandler((event) => {
       priority: '0.8',
     })),
     { base: '/kontakt', lastmod: now, changefreq: 'monthly', priority: '0.8' },
+    /* noindex until the client confirms the licence; see TRANSPORT_LIVE. */
+    ...(TRANSPORT_LIVE ? [{ base: '/prevoz-putnika', lastmod: now, changefreq: 'monthly', priority: '0.8' }] : []),
     { base: '/o-nama', lastmod: now, changefreq: 'yearly', priority: '0.6' },
     /* noindex until the client's terms are on the page; see TERMS_COMPLETE. */
     ...(TERMS_COMPLETE ? [{ base: '/uslovi', lastmod: now, changefreq: 'monthly', priority: '0.5' }] : []),

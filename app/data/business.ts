@@ -8,10 +8,11 @@ import type { FleetCar, LocaleOption } from '~/i18n/types'
  *
  *   grep -rn "TODO(client)" app/
  *
- * Location: resolved from the client's own Google share link
- * (maps.app.goo.gl/a2eyGNc18L17Ydnf8) to the listing "Rent a car Beganovic
- * Prijedor" at 44.9632, 16.8657 — on the M4 in Brđani, just east of Kozarac,
- * between Prijedor and Banja Luka.
+ * Location: the client is moving the business onto his own lot and the new
+ * street address is not confirmed. Until it is, the site says only
+ * "Prijedor – Kozarac" and never prints a street. TODO(client): new address.
+ * The map link and geo still point at the client's existing Google listing
+ * (maps.app.goo.gl/a2eyGNc18L17Ydnf8); update both once the listing moves.
  */
 
 const PHONE_E164 = '+38762269229'
@@ -32,18 +33,21 @@ export function inboxHref(subject: string, body: string) {
 export const BUSINESS = {
   name: 'Rent a Car Beganović',
   shortName: 'Beganović',
+  /* As registered with Grad Prijedor (rješenje br. 05-350-264/23), founded 12.09.2019. */
+  legalName: '„BEGANOVIĆ" Zehrudin Beganović s.p. Prijedor',
+  foundingDate: '2019-09-12',
 
   phone: PHONE_E164,
   phoneDisplay: PHONE_DISPLAY,
   phoneHref: `tel:${PHONE_E164}`,
   whatsappHref: `https://wa.me/${PHONE_E164.replace('+', '')}`,
 
-  street: 'M4, Brđani',
+  /* TODO(client): street address once the move is done. */
+  locality: 'Kozarac',
   city: 'Prijedor',
-  postalCode: '79101',
   country: 'BA',
   /* One NAP string, used verbatim everywhere the address is rendered. */
-  addressShort: 'M4, Brđani, 79101 Prijedor',
+  addressShort: 'Prijedor – Kozarac',
 
   /* CID from the share link's 0x54712e65a49cb62d feature id. */
   googleMapsUrl: 'https://www.google.com/maps?cid=6084695585642559021',
@@ -54,8 +58,8 @@ export const BUSINESS = {
   logoDark: '/images/brand/logo-dark.webp',
   ogImage: '/images/og-image.jpg',
 
-  /* TODO(client): social profiles. Empty means "do not render". */
-  facebookUrl: '',
+  /* Social profiles. Empty means "do not render". */
+  facebookUrl: 'https://www.facebook.com/p/Rent-a-car-Beganovi%C4%87-Kozarac-Prijedor-100095571548369/',
   instagramUrl: '',
 } as const
 
@@ -67,6 +71,17 @@ export const BUSINESS = {
  * Flip this once the real terms are on the page.
  */
 export const TERMS_COMPLETE = false
+
+/*
+ * TODO(client): passenger transport. The client wants it promoted, but the
+ * registration he sent (rješenje 05-350-264/23) lists car rental (77.11) and
+ * goods transport for own needs (49.41) — no passenger transport. Carrying
+ * paying passengers in RS needs a registered activity and a licence, and the
+ * website would be the evidence. So the page is built and prerendered for
+ * the client to review, but stays noindex, out of the sitemap, out of the
+ * menu and off the home page until he confirms the licence. Flip to true.
+ */
+export const TRANSPORT_LIVE = false
 
 /* WhatsApp deep link with the message already typed. */
 export function whatsappHref(message?: string) {

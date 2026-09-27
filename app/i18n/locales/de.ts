@@ -10,11 +10,12 @@ export const de: LocaleMessages = {
     title: 'Mietwagen Prijedor — Beganović | Automatik & Schaltung',
     description:
       'Rent a Car Beganović in Prijedor, Bosnien: sechs Autos mit Automatik oder Schaltung, '
-      + 'ein Siebensitzer und ein SUV. Abholung an der M4 in Brđani bei Kozarac. Tel. +387 62 269 229.',
+      + 'ein Siebensitzer und ein SUV. Lokale Vermietung aus Kozarac seit 2019. Tel. +387 62 269 229.',
     ogImageAlt: 'Die Fahrzeuge von Rent a Car Beganović über Prijedor im Sonnenuntergang',
   },
   nav: {
     fleet: 'Fahrzeuge',
+    transport: 'Personenbeförderung',
     about: 'Über uns',
     terms: 'Mietbedingungen',
     blog: 'Blog',
@@ -27,18 +28,18 @@ export const de: LocaleMessages = {
     langLabel: 'Sprache wechseln',
   },
   hero: {
-    location: 'M4, Brđani bei Kozarac · Prijedor',
+    location: 'Prijedor – Kozarac',
     titleLead: 'Mietwagen in Prijedor.',
     titleAccent: 'Einsteigen und los.',
     subtitle:
-      'Sechs Autos — Automatik und Schaltung, Kompakt, Familie und SUV — direkt an der Hauptstraße M4. '
+      'Sechs Autos — Automatik und Schaltung, Kompakt, Familie und SUV — in Kozarac bei Prijedor. '
       + 'Schicken Sie uns Ihre Daten: Sie bekommen den Gesamtpreis vorab und ein Auto, das bereitsteht.',
     ctaCall: 'Anrufen',
     ctaForm: 'Anfrage senden',
     proof: [
       'Gesamtpreis vor der Bestätigung',
       'Drei Automatik-Autos im Angebot',
-      'Direkt auf der Hauptstraße, ohne Stadtverkehr',
+      'Lokale Vermietung seit 2019',
     ],
     lineupAlt: 'Peugeot 5008, Golf 6, Peugeot 308, Golf 7 und Mazda 5 — die Flotte von Rent a Car Beganović',
   },
@@ -53,6 +54,8 @@ export const de: LocaleMessages = {
     namePlaceholder: 'Ihr Name',
     phone: 'Telefon',
     phonePlaceholder: '+49 …',
+    city: 'Wohnort',
+    cityPlaceholder: 'Z. B. Wien, München, Prijedor',
     message: 'Hinweis',
     messagePlaceholder: 'Z. B. Anzahl der Personen, Abholzeit…',
     submit: 'Anfrage senden',
@@ -70,9 +73,9 @@ export const de: LocaleMessages = {
     'Mietwagen Prijedor',
     'Automatik & Schaltung',
     'Siebensitzer für Familien',
-    'Direkt an der M4',
-    'Kozara in 25 Minuten',
-    'Banja Luka in 45 Minuten',
+    'Prijedor – Kozarac',
+    'Kozara in 20 Minuten',
+    'Banja Luka in 50 Minuten',
     'Preis vorab bekannt',
   ],
   why: {
@@ -86,11 +89,11 @@ export const de: LocaleMessages = {
       },
       {
         title: 'Sofort unterwegs',
-        body: 'Wir liegen an der Hauptstraße M4 in Brđani, zwischen Prijedor und Kozarac. Schlüssel nehmen und Sie sind schon auf der Hauptstraße — ohne Stadtverkehr und Parkplatzsuche.',
+        body: 'Wir sind in Kozarac, an der Straße zwischen Prijedor und Banja Luka. Schlüssel nehmen und Sie sind schnell auf der Hauptstraße — ohne Stadtverkehr und Parkplatzsuche.',
       },
       {
-        title: 'Automatik oder Schaltung',
-        body: 'Drei Automatik- und drei Schaltwagen: vom Golf für die Stadt über den Siebensitzer für die ganze Familie bis zum Kuga für die Bergstraßen der Kozara.',
+        title: 'Autos aus eigener Werkstatt',
+        body: 'Neben der Vermietung betreiben wir eine eigene Kfz-Werkstatt und warten unsere Autos selbst. Wir kennen die Geschichte jedes Fahrzeugs und wissen, was daran gemacht wurde.',
       },
       {
         title: 'Sie sprechen mit uns, nicht mit einem Callcenter',
@@ -125,13 +128,13 @@ export const de: LocaleMessages = {
     title: 'Ein Auto mieten sollte einfach sein',
     paragraphs: [
       'Bei Rent a Car Beganović finden wir, dass eine Automiete schnell, klar und ohne versteckte Kosten sein sollte. Deshalb nennen wir Ihnen den Preis vorab, übergeben das Auto sauber und fahrbereit und sind während der ganzen Mietzeit telefonisch erreichbar.',
-      'Wir liegen an der Hauptstraße M4 in Brđani — wenige Minuten von Kozarac, etwa eine Viertelstunde vom Zentrum Prijedors und auf dem Weg nach Banja Luka und in den Nationalpark Kozara. Ob Sie geschäftlich hier sind, aus dem Ausland nach Hause kommen oder Ihr eigenes Auto in der Werkstatt steht: Wir haben das passende Fahrzeug.',
+      'Wir sind in Kozarac — etwa eine Viertelstunde vom Zentrum Prijedors, auf dem Weg nach Banja Luka und am Fuß des Nationalparks Kozara. Ob Sie geschäftlich hier sind, aus dem Ausland nach Hause kommen oder Ihr eigenes Auto in der Werkstatt steht: Wir haben das passende Fahrzeug.',
     ],
     stats: [
       { value: '6', label: 'Autos im Angebot' },
       { value: '3', label: 'mit Automatik' },
       { value: '7', label: 'Sitze im Mazda 5' },
-      { value: 'M4', label: 'direkt an der Hauptstraße' },
+      { value: '2019', label: 'gegründet' },
     ],
     imageAlt: 'Prijedor, der Fluss und ein Kirchturm im Sonnenuntergang',
   },
@@ -154,8 +157,8 @@ export const de: LocaleMessages = {
       },
       {
         label: 'Abholung',
-        title: 'Schlüssel an der M4 in Brđani',
-        body: 'Sie holen das Auto an unserer Adresse ab, mit einem kurzen gemeinsamen Rundgang ums Fahrzeug. Bitte Personalausweis oder Reisepass und gültigen Führerschein mitbringen.',
+        title: 'Schlüssel in Kozarac',
+        body: 'Sie holen das Auto bei uns in Kozarac ab, mit einem kurzen gemeinsamen Rundgang ums Fahrzeug. Bitte Personalausweis oder Reisepass und gültigen Führerschein mitbringen.',
         points: ['Personalausweis oder Reisepass', 'Gültiger Führerschein', 'Gemeinsame Fahrzeugprüfung'],
       },
       {
@@ -167,8 +170,8 @@ export const de: LocaleMessages = {
       {
         label: 'Rückgabe',
         title: 'Auto zurück, fertig',
-        body: 'Sie geben das Auto zur vereinbarten Zeit an derselben Adresse zurück. Kurzer gemeinsamer Blick aufs Auto und fertig — ohne Warten und Umstände.',
-        points: ['Gleiche Adresse, vereinbarte Zeit', 'Kurze gemeinsame Prüfung', 'Verspätung? Einfach Bescheid geben'],
+        body: 'Sie geben das Auto zur vereinbarten Zeit am selben Ort zurück. Kurzer gemeinsamer Blick aufs Auto und fertig — ohne Warten und Umstände.',
+        points: ['Gleicher Ort, vereinbarte Zeit', 'Kurze gemeinsame Prüfung', 'Verspätung? Einfach Bescheid geben'],
       },
       {
         label: 'Fragen',
@@ -180,20 +183,19 @@ export const de: LocaleMessages = {
   },
   routes: {
     eyebrow: 'Standort',
-    title: 'Von Brđani aus sind Sie schnell überall',
-    intro: 'Unser Büro liegt an der Hauptstraße M4 — keine Fahrt durchs Stadtzentrum. Ungefähre Fahrzeiten ab uns:',
+    title: 'Von Kozarac aus sind Sie schnell überall',
+    intro: 'Kozarac liegt an der Hauptstraße zwischen Prijedor und Banja Luka — keine Fahrt durchs Stadtzentrum. Ungefähre Fahrzeiten ab Kozarac:',
     items: [
-      { place: 'Kozarac', note: 'Der nächste Ort, direkt nebenan', km: 4, time: '10 Min.' },
-      { place: 'NP Kozara — Mrakovica', note: 'Wälder, Aussichtspunkte, Wanderwege', km: 16, time: '25 Min.' },
-      { place: 'Prijedor Zentrum', note: 'Die Stadt an der Sana', km: 15, time: '20 Min.' },
-      { place: 'Banja Luka', note: 'Größte Stadt der Region', km: 42, time: '45 Min.' },
-      { place: 'Flughafen Banja Luka', note: 'Der nächste Flughafen', km: 56, time: '1 Std. 5 Min.' },
-      { place: 'Sanski Most', note: 'Die Sana und die Dabar-Quelle', km: 46, time: '55 Min.' },
-      { place: 'Novi Grad — Grenze', note: 'Übergang nach Kroatien', km: 59, time: '1 Std. 10 Min.' },
-      { place: 'Flughafen Zagreb', note: 'Flüge aus ganz Europa', km: 169, time: '2 Std. 25 Min.' },
+      { place: 'NP Kozara — Mrakovica', note: 'Wälder, Aussichtspunkte, Wanderwege', km: 11, time: '20 Min.' },
+      { place: 'Prijedor Zentrum', note: 'Die Stadt an der Sana', km: 12, time: '15 Min.' },
+      { place: 'Sanski Most', note: 'Die Sana und die Dabar-Quelle', km: 42, time: '50 Min.' },
+      { place: 'Banja Luka', note: 'Größte Stadt der Region', km: 44, time: '50 Min.' },
+      { place: 'Novi Grad — Grenze', note: 'Übergang nach Kroatien', km: 55, time: '1 Std. 5 Min.' },
+      { place: 'Flughafen Banja Luka', note: 'Der nächste Flughafen', km: 58, time: '1 Std. 5 Min.' },
+      { place: 'Flughafen Zagreb', note: 'Flüge aus ganz Europa', km: 166, time: '2 Std. 25 Min.' },
     ],
     mapCta: 'In Google Maps öffnen',
-    addressLabel: 'Unsere Adresse',
+    addressLabel: 'Wo wir sind',
   },
   diaspora: {
     title: 'Im Sommer nach Hause?',
@@ -227,7 +229,7 @@ export const de: LocaleMessages = {
       },
       {
         q: 'Wo hole ich das Auto ab?',
-        a: 'An unserer Adresse: Hauptstraße M4, Brđani, bei Kozarac (79101 Prijedor). Den genauen Standort finden Sie auf Google Maps.',
+        a: 'Bei uns in Kozarac, Prijedor. Den genauen Standort und die Anfahrt schicken wir mit der Buchungsbestätigung, außerdem finden Sie uns auf Google Maps.',
       },
       {
         q: 'Kann ich ein Auto für längere Zeit mieten?',
@@ -247,14 +249,14 @@ export const de: LocaleMessages = {
     ctaBody: 'Schicken Sie uns Ihre Daten — wir nennen Verfügbarkeit und Gesamtpreis vorab.',
   },
   cta: {
-    title: 'Ihr Auto wartet an der M4.',
+    title: 'Ihr Auto wartet in Kozarac.',
     body: 'Anrufen, Nachricht oder Anfrage senden — in wenigen Minuten ist alles geklärt.',
     whatsapp: 'Per WhatsApp schreiben',
   },
   about: {
     metaTitle: 'Über uns | Rent a Car Beganović, Prijedor',
     metaDescription:
-      'Rent a Car Beganović ist eine lokale Autovermietung an der Hauptstraße M4 in Brđani bei Kozarac, Prijedor. '
+      'Rent a Car Beganović ist eine lokale Autovermietung aus Kozarac, Prijedor, seit 2019. '
       + 'Sechs Autos, klarer Preis vorab und direkter Kontakt.',
     title: 'Lokale Agentur, klare Absprachen',
     lead: 'Rent a Car Beganović ist eine Autovermietung aus Prijedor. Wir machen es einfach: das richtige Auto, ein ehrlicher Preis vorab und Menschen, mit denen Sie direkt sprechen.',
@@ -265,7 +267,7 @@ export const de: LocaleMessages = {
       },
       {
         title: 'Wo wir sind',
-        body: 'Wir liegen an der Hauptstraße M4 in Brđani, wenige Minuten von Kozarac und etwa eine Viertelstunde vom Zentrum Prijedors entfernt. Das Büro liegt direkt an der Straße nach Banja Luka — mit dem Schlüssel in der Hand sind Sie sofort unterwegs, ohne durch die Stadt zu fahren.',
+        body: 'Wir sind in Kozarac, etwa eine Viertelstunde vom Zentrum Prijedors entfernt. Kozarac liegt an der Straße nach Banja Luka und am Fuß der Kozara — mit dem Schlüssel in der Hand sind Sie schnell unterwegs, ohne durch die Stadt zu fahren.',
       },
       {
         title: 'An wen wir vermieten',
@@ -278,6 +280,15 @@ export const de: LocaleMessages = {
       { title: 'Fahrbereites Auto', body: 'Sie bekommen das Auto sauber, geprüft und startklar.' },
       { title: 'Erreichbarkeit', body: 'Während der Miete sind wir per Telefon und WhatsApp für Sie da.' },
     ],
+    servicesEyebrow: 'Mehr als Autovermietung',
+    servicesTitle: 'Autos sind unser Geschäft',
+    servicesIntro: 'Neben der Vermietung betreibt „Beganović“ s.p. Zehrudin Beganović eine Kfz-Werkstatt sowie Import und Verkauf von Fahrzeugen. Deshalb kennen wir unsere Mietwagen bis zur letzten Schraube.',
+    services: [
+      { title: 'Kfz-Werkstatt', body: 'Wartung und Reparatur von Pkw. Dieselbe Werkstatt betreut auch unsere Mietwagen — wir wissen genau, in welchem Zustand jeder ist.' },
+      { title: 'Import und Verkauf von Autos und Motorrädern', body: 'Sie suchen ein eigenes Auto oder Motorrad? Sagen Sie uns, was Sie brauchen — wir importieren und verkaufen Pkw und Motorräder.' },
+      { title: 'Landmaschinen', body: 'Import und Verkauf von Landmaschinen, Ausrüstung und Anbaugeräten. Fragen Sie nach dem aktuellen Angebot.' },
+    ],
+    servicesCta: 'Zu diesen Leistungen anfragen',
   },
   terms: {
     metaTitle: 'Mietbedingungen | Rent a Car Beganović, Prijedor',
@@ -290,26 +301,26 @@ export const de: LocaleMessages = {
     basics: [
       'Für die Abholung benötigen Sie Personalausweis oder Reisepass und einen gültigen Führerschein.',
       'Eine Buchung gilt, sobald Sie sie bestätigen, nachdem wir Ihnen den Gesamtpreis genannt haben.',
-      'Abholung und Rückgabe erfolgen an unserer Adresse: M4, Brđani, 79101 Prijedor.',
+      'Abholung und Rückgabe erfolgen bei uns in Kozarac (Prijedor), an dem Ort, den wir mit der Buchung bestätigen.',
       'Bei Abholung und Rückgabe prüfen wir das Auto gemeinsam.',
     ],
   },
   contactPage: {
     metaTitle: 'Kontakt | Rent a Car Beganović, Prijedor — +387 62 269 229',
-    metaDescription: 'Kontakt zu Rent a Car Beganović: Telefon und WhatsApp +387 62 269 229, Adresse M4, Brđani, 79101 Prijedor. Mietwagen-Anfrage senden.',
+    metaDescription: 'Kontakt zu Rent a Car Beganović in Kozarac, Prijedor: Telefon und WhatsApp +387 62 269 229. Mietwagen-Anfrage senden.',
     title: 'Melden Sie sich — es geht schnell',
     lead: 'Am schnellsten erreichen Sie uns per Telefon oder WhatsApp. Für eine Buchung können Sie auch das Formular nutzen.',
     callTitle: 'Telefon',
     whatsappTitle: 'WhatsApp',
     whatsappBody: 'Schreiben Sie uns, wir antworten schnell.',
-    addressTitle: 'Adresse',
+    addressTitle: 'Standort',
     directions: 'Route in Google Maps',
     formTitle: 'Mietwagen-Anfrage senden',
   },
   vehicle: {
     metaTitle: '{car} {year}, {gearbox} — Mietwagen Prijedor | Beganović',
     metaDescription:
-      '{car} ({year}, {gearbox}) in Prijedor, Bosnien mieten. Abholung an der M4 in Brđani bei Kozarac. '
+      '{car} ({year}, {gearbox}) in Prijedor, Bosnien mieten. Abholung in Kozarac. '
       + 'Anfrage senden und den Gesamtpreis vorab erhalten.',
     specsTitle: 'Eckdaten',
     spec: {
@@ -326,11 +337,38 @@ export const de: LocaleMessages = {
     similarTitle: 'Das könnte Ihnen auch gefallen',
     backToFleet: 'Alle Autos',
   },
+  transport: {
+    metaTitle: 'Personenbeförderung Prijedor & Kozarac | Beganović',
+    metaDescription: 'Personenbeförderung ab Prijedor und Kozarac: Transfers zu den Flughäfen Banja Luka und Zagreb, Geschäftsreisen und Abholung bei Heimatbesuchen. Preis vorab. Tel. +387 62 269 229.',
+    title: 'Personenbeförderung: Sie lehnen sich zurück, wir fahren',
+    lead: 'Wenn Sie kein Auto brauchen, sondern eine Fahrt. Wir bringen Sie zum Flughafen, zum Geschäftstermin oder zur Familienfeier — zu einem Preis, der vor der Abfahrt feststeht.',
+    useCasesTitle: 'Wohin wir Sie fahren',
+    useCases: [
+      { title: 'Flughafentransfers', body: 'Banja Luka, Zagreb und weitere Flughäfen der Region. Wir holen Sie bei der Ankunft ab oder bringen Sie zum Flug — ohne Parkplatzsuche.' },
+      { title: 'Heimatbesuch', body: 'Sie kommen mit Flugzeug oder Bus? Wir holen Sie ab und bringen Sie nach Kozarac, Prijedor oder Umgebung — samt Gepäck.' },
+      { title: 'Geschäftsreisen', body: 'Ein Termin in Banja Luka oder einer anderen Stadt? Wir fahren Sie hin und zurück, während Sie sich vorbereiten oder arbeiten.' },
+      { title: 'Feiern und Ausflüge', body: 'Gäste zur Hochzeit oder Feier, ein Ausflug auf die Kozara — wir vereinbaren Strecke, Zeit und Personenzahl.' },
+    ],
+    stepsTitle: 'So buchen Sie eine Fahrt',
+    steps: [
+      { title: 'Strecke nennen', body: 'Rufen Sie an oder schreiben Sie per WhatsApp: von wo, wohin, wann und wie viele Personen.' },
+      { title: 'Preis erhalten', body: 'Wir nennen Ihnen den Gesamtpreis der Fahrt, bevor Sie etwas bestätigen.' },
+      { title: 'Losfahren', body: 'Zur vereinbarten Zeit ist der Fahrer am vereinbarten Ort. Sie steigen einfach ein.' },
+    ],
+    ctaTitle: 'Brauchen Sie eine Fahrt?',
+    ctaBody: 'Schicken Sie uns Strecke und Datum — wir melden Preis und Verfügbarkeit.',
+    whatsappMessage: 'Hallo, ich interessiere mich für eine Personenbeförderung.\nStrecke: \nDatum und Uhrzeit: \nPersonen: ',
+    teaserEyebrow: 'Personenbeförderung',
+    teaserTitle: 'Lieber nicht selbst fahren? Wir fahren Sie.',
+    teaserBody: 'Flughafentransfers, Geschäftsreisen und Abholung bei Heimatbesuchen — mit unserem Fahrer, zum vorab vereinbarten Preis.',
+    teaserCta: 'Mehr zur Personenbeförderung',
+  },
   footer: {
-    tagline: 'Mietwagen in Prijedor — Autos mit Automatik und Schaltung, direkt an der Hauptstraße M4 in Brđani.',
+    tagline: 'Mietwagen in Prijedor — Autos mit Automatik und Schaltung, aus Kozarac seit 2019.',
     navigation: 'Seiten',
     contact: 'Kontakt',
     rights: 'Alle Rechte vorbehalten.',
+    services: 'Autovermietung · Personenbeförderung · Kfz-Werkstatt · Import und Verkauf von Autos, Motorrädern und Landmaschinen',
     footerNav: 'Fußzeilen-Navigation',
     langs: 'Sprache',
   },

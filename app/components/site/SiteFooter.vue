@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { PhMapPin, PhPhone, PhWhatsappLogo } from '@phosphor-icons/vue'
+import { PhFacebookLogo, PhMapPin, PhPhone, PhWhatsappLogo } from '@phosphor-icons/vue'
+import { TRANSPORT_LIVE } from '~/data/business'
 
 /*
  * Navy footer — the logo's dark, so the page ends on the brand. The address
@@ -8,6 +9,11 @@ import { PhMapPin, PhPhone, PhWhatsappLogo } from '@phosphor-icons/vue'
  */
 const { t, business, menuLinks, localeLinks, localeRoute } = useI18n()
 const year = new Date().getFullYear()
+
+/* The owner's other trades. Passenger transport is named only once live. */
+const servicesLine = computed(() => TRANSPORT_LIVE
+  ? t.value.footer.services
+  : t.value.footer.services.split(' · ').filter((_, i) => i !== 1).join(' · '))
 </script>
 
 <template>
@@ -26,6 +32,9 @@ const year = new Date().getFullYear()
         </NuxtLink>
         <p class="mt-6 max-w-sm text-[0.9375rem] leading-relaxed text-navy-300">
           {{ t.footer.tagline }}
+        </p>
+        <p class="mt-4 max-w-sm text-[0.8125rem] leading-relaxed text-navy-400">
+          {{ servicesLine }}
         </p>
       </div>
 
@@ -64,6 +73,17 @@ const year = new Date().getFullYear()
               WhatsApp
             </a>
           </li>
+          <li v-if="business.facebookUrl">
+            <a
+              :href="business.facebookUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 transition-colors duration-200 hover:text-flame-300"
+            >
+              <PhFacebookLogo :size="18" weight="fill" class="text-flame-400" aria-hidden="true" />
+              Facebook
+            </a>
+          </li>
           <li>
             <a
               :href="business.googleShortUrl"
@@ -97,7 +117,7 @@ const year = new Date().getFullYear()
 
     <div class="relative border-t border-navy-800">
       <div class="shell flex flex-col gap-2 py-6 text-xs text-navy-400 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {{ year }} {{ business.name }}. {{ t.footer.rights }}</p>
+        <p>© {{ year }} {{ business.name }} · {{ business.legalName }}. {{ t.footer.rights }}</p>
         <p dir="ltr">rentacarbeganovic.com</p>
       </div>
     </div>

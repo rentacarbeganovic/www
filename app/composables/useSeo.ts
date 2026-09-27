@@ -147,6 +147,8 @@ export function autoRentalSchema(description: string) {
     '@type': 'AutoRental',
     '@id': `${absoluteUrl('/')}${ORGANIZATION_ID}`,
     name: BUSINESS.name,
+    legalName: BUSINESS.legalName,
+    foundingDate: BUSINESS.foundingDate,
     description,
     url: absoluteUrl('/'),
     telephone: BUSINESS.phone,
@@ -155,9 +157,7 @@ export function autoRentalSchema(description: string) {
     currenciesAccepted: 'BAM, EUR',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: BUSINESS.street,
-      addressLocality: BUSINESS.city,
-      postalCode: BUSINESS.postalCode,
+      addressLocality: `${BUSINESS.locality}, ${BUSINESS.city}`,
       addressCountry: BUSINESS.country,
     },
     geo: {

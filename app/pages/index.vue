@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { BUSINESS } from '~/data/business'
+import { BUSINESS, TRANSPORT_LIVE } from '~/data/business'
 import { LOCALES } from '~/i18n/routing'
 
 /*
  * Section order follows the decision a renter makes:
  *   promise + "is a car free on my dates" (hero + form)
  *   -> why this agency (objections: price, location, gearbox, who you deal with)
- *   -> the cars
+ *   -> the cars (-> passenger transport, for those who would rather not drive)
  *   -> who we are
  *   -> how renting works, stage by stage
  *   -> where we are and how far everything is
@@ -46,6 +46,7 @@ jsonLd(
     <HomeMarquee />
     <HomeWhy />
     <HomeFleet />
+    <HomeTransport v-if="TRANSPORT_LIVE" />
     <HomeStory />
     <HomeService />
     <HomeRoutes />

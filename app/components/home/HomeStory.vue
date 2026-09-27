@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { PhMapPin } from '@phosphor-icons/vue'
 import { HERO_IMAGES } from '~/data/business'
 
 /*
@@ -32,7 +33,7 @@ const { t, localeRoute } = useI18n()
           class="absolute -end-5 -top-5 -z-10 h-28 w-28 rounded-full border-[10px] border-flame-500 border-b-transparent border-s-transparent"
         />
         <div class="absolute -bottom-6 start-6 flex items-center gap-3 rounded-2xl bg-navy-950 px-5 py-4 text-paper-0 shadow-lift">
-          <span class="font-display text-4xl font-black text-flame-400" style="font-stretch: 112%">M4</span>
+          <PhMapPin :size="34" weight="fill" class="shrink-0 text-flame-400" aria-hidden="true" />
           <span class="max-w-[10rem] text-sm font-semibold leading-snug text-navy-300">{{ t.hero.location }}</span>
         </div>
       </div>

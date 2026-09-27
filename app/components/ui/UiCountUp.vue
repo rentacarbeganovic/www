@@ -1,13 +1,13 @@
 <script setup lang="ts">
 /*
  * Counts a number up from zero the first time it scrolls into view. Values
- * that are not plain integers ("M4") render as-is. The final value is what
+ * that are not plain integers, and years ("2019"), render as-is. The final value is what
  * is prerendered, so crawlers and no-JS visitors see the real figure.
  */
 const props = defineProps<{ value: string }>()
 
 const target = Number.parseInt(props.value, 10)
-const isNumber = String(target) === props.value
+const isNumber = String(target) === props.value && target < 1000
 const display = ref(props.value)
 const el = ref<HTMLElement | null>(null)
 

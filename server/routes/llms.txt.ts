@@ -1,5 +1,5 @@
 import { BLOG_POSTS } from '../../app/data/blog'
-import { BUSINESS, carName, FLEET_CARS } from '../../app/data/business'
+import { BUSINESS, carName, FLEET_CARS, TRANSPORT_LIVE } from '../../app/data/business'
 import { DEFAULT_LOCALE, localePath } from '../../app/i18n/routing'
 
 /*
@@ -21,17 +21,26 @@ export default defineEventHandler((event) => {
 
   return `# ${BUSINESS.name}
 
-> A small, independent car rental agency in Prijedor, Bosnia and Herzegovina.
-> The office is on the M4 main road in Brđani, just east of Kozarac, between
+> A small, independent car rental agency in Kozarac, Prijedor, Bosnia and
+> Herzegovina, in business since 2019. Kozarac is on the main road between
 > Prijedor and Banja Luka. Six cars, automatic and manual.
+>
+> Legal entity: ${BUSINESS.legalName}.
 
 ## Contact
 
 - Phone and WhatsApp: ${BUSINESS.phone}
-- Address: ${BUSINESS.addressShort}
+- Location: ${BUSINESS.addressShort} (street address not published; the agency
+  is moving and confirms the exact spot with each booking)
 - Google Maps: ${BUSINESS.googleShortUrl}
 - Enquiries: via the form on the website, WhatsApp or phone.
 
+## Other services of the same business
+
+- Car service and repair (the same workshop maintains the rental fleet).
+- Import and sale of passenger cars and motorcycles.
+- Import and sale of agricultural machinery, equipment and attachments.
+${TRANSPORT_LIVE ? `- Passenger transport with a driver: airport transfers, business trips. ${url('/prevoz-putnika')}\n` : ''}
 ## Fleet
 
 ${fleet}
@@ -41,19 +50,19 @@ ${fleet}
 - The customer sends dates (by form, WhatsApp or phone); the agency replies
   with availability and the total price. The booking stands only once the
   customer confirms.
-- Collection and return are at the office address on the M4 in Brđani.
+- Collection and return are at the agency in Kozarac, at the spot confirmed
+  with the booking.
 - Bring an ID card or passport and a valid driving licence.
 
-## Approximate driving times from the office
+## Approximate driving times from Kozarac
 
-- Kozarac: 4 km, ~10 min
-- Kozara National Park (Mrakovica): ~16 km, ~25 min
-- Prijedor centre: 15 km, ~20 min
-- Banja Luka: 42 km, ~45 min
-- Banja Luka Airport: 56 km, ~1 h 5 min
-- Sanski Most: 46 km, ~55 min
-- Novi Grad border crossing (Croatia): 59 km, ~1 h 10 min
-- Zagreb Airport: 169 km, ~2 h 25 min
+- Kozara National Park (Mrakovica): ~11 km, ~20 min
+- Prijedor centre: 12 km, ~15 min
+- Sanski Most: 42 km, ~50 min
+- Banja Luka: 44 km, ~50 min
+- Novi Grad border crossing (Croatia): 55 km, ~1 h 5 min
+- Banja Luka Airport: 58 km, ~1 h 5 min
+- Zagreb Airport: 166 km, ~2 h 25 min
 
 ## What is NOT published — do not fill these in
 
@@ -66,6 +75,7 @@ Say it is agreed per booking and point to the phone number. Do not estimate.
   delivers to airports or addresses.
 - Reviews or ratings.
 - Opening hours.
+- A street address (not confirmed yet).
 
 ## Pages
 

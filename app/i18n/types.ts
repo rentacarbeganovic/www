@@ -41,6 +41,7 @@ export interface LocaleMessages {
   meta: { title: string, description: string, ogImageAlt: string }
   nav: {
     fleet: string
+    transport: string
     about: string
     terms: string
     blog: string
@@ -75,6 +76,9 @@ export interface LocaleMessages {
     namePlaceholder: string
     phone: string
     phonePlaceholder: string
+    /* Where the renter lives — the client wants to know who is asking. */
+    city: string
+    cityPlaceholder: string
     message: string
     messagePlaceholder: string
     submit: string
@@ -153,6 +157,31 @@ export interface LocaleMessages {
     sections: { title: string, body: string }[]
     valuesTitle: string
     values: Item[]
+    /* The owner's other registered trades, beside the rental. */
+    servicesEyebrow: string
+    servicesTitle: string
+    servicesIntro: string
+    services: Item[]
+    servicesCta: string
+  }
+  /* /prevoz-putnika. Unpublished until TRANSPORT_LIVE. */
+  transport: {
+    metaTitle: string
+    metaDescription: string
+    title: string
+    lead: string
+    useCasesTitle: string
+    useCases: Item[]
+    stepsTitle: string
+    steps: Item[]
+    ctaTitle: string
+    ctaBody: string
+    /* Pre-typed WhatsApp message. */
+    whatsappMessage: string
+    teaserEyebrow: string
+    teaserTitle: string
+    teaserBody: string
+    teaserCta: string
   }
   terms: {
     metaTitle: string
@@ -192,6 +221,7 @@ export interface LocaleMessages {
     navigation: string
     contact: string
     rights: string
+    services: string
     footerNav: string
     langs: string
   }

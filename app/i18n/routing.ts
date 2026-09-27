@@ -34,6 +34,7 @@ const PATH_OVERRIDES: { base: string, paths: Partial<Record<Locale, string>> }[]
   { base: '/o-nama', paths: { en: '/about', de: '/ueber-uns', ar: '/about' } },
   { base: '/uslovi', paths: { en: '/terms', de: '/mietbedingungen', ar: '/terms' } },
   { base: '/kontakt', paths: { en: '/contact', de: '/kontakt', ar: '/contact' } },
+  { base: '/prevoz-putnika', paths: { en: '/passenger-transport', de: '/personenbefoerderung', ar: '/passenger-transport' } },
 ]
 
 function overrideFor(base: string, locale: Locale): string {

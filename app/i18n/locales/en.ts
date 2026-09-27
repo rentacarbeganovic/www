@@ -6,11 +6,12 @@ export const en: LocaleMessages = {
     title: 'Car Rental Prijedor — Beganović | Automatic & Manual',
     description:
       'Rent a Car Beganović in Prijedor, Bosnia: six cars with automatic or manual gearbox, '
-      + 'a seven-seater and an SUV. Pick-up on the M4 in Brđani near Kozarac. Call +387 62 269 229.',
+      + 'a seven-seater and an SUV. A local agency in Kozarac since 2019. Call +387 62 269 229.',
     ogImageAlt: 'Rent a Car Beganović fleet above Prijedor at sunset',
   },
   nav: {
     fleet: 'Cars',
+    transport: 'Passenger transport',
     about: 'About',
     terms: 'Terms',
     blog: 'Blog',
@@ -23,18 +24,18 @@ export const en: LocaleMessages = {
     langLabel: 'Change language',
   },
   hero: {
-    location: 'M4, Brđani near Kozarac · Prijedor',
+    location: 'Prijedor – Kozarac',
     titleLead: 'Car rental in Prijedor.',
     titleAccent: 'Get in and go.',
     subtitle:
-      'Six cars — automatic and manual, compact, family and SUV — right on the M4 main road. '
+      'Six cars — automatic and manual, compact, family and SUV — in Kozarac near Prijedor. '
       + 'Send your dates, get the total price up front and a car ready for the road.',
     ctaCall: 'Call',
     ctaForm: 'Send enquiry',
     proof: [
       'Total price before you confirm',
       'Three automatics in the fleet',
-      'Straight onto the main road, no city traffic',
+      'A local agency since 2019',
     ],
     lineupAlt: 'Peugeot 5008, Golf 6, Peugeot 308, Golf 7 and Mazda 5 — the Rent a Car Beganović fleet',
   },
@@ -49,6 +50,8 @@ export const en: LocaleMessages = {
     namePlaceholder: 'Your name',
     phone: 'Phone',
     phonePlaceholder: '+49 …',
+    city: 'Place of residence',
+    cityPlaceholder: 'E.g. Vienna, Stockholm, Prijedor',
     message: 'Note',
     messagePlaceholder: 'E.g. number of passengers, pick-up time…',
     submit: 'Send enquiry',
@@ -66,9 +69,9 @@ export const en: LocaleMessages = {
     'Car rental Prijedor',
     'Automatic & manual',
     'Seven-seater for families',
-    'Right on the M4',
-    'Kozara in 25 minutes',
-    'Banja Luka in 45 minutes',
+    'Prijedor – Kozarac',
+    'Kozara in 20 minutes',
+    'Banja Luka in 50 minutes',
     'Price known up front',
   ],
   why: {
@@ -82,11 +85,11 @@ export const en: LocaleMessages = {
       },
       {
         title: 'On the road straight away',
-        body: 'We are on the M4 main road in Brđani, between Prijedor and Kozarac. Take the keys and you are already on the highway — no city traffic, no hunting for parking.',
+        body: 'We are in Kozarac, on the road between Prijedor and Banja Luka. Take the keys and you are quickly on the main road — no city traffic, no hunting for parking.',
       },
       {
-        title: 'Automatic or manual',
-        body: 'Three automatics and three manuals: from a Golf for town, to a seven-seater for the whole family, to the Kuga for Kozara’s mountain roads.',
+        title: 'Cars from our own workshop',
+        body: 'Besides the rental we run a car service workshop, so we maintain our cars ourselves. We know every car\'s history and what has been done on it.',
       },
       {
         title: 'Talk to us, not a call centre',
@@ -121,13 +124,13 @@ export const en: LocaleMessages = {
     title: 'Renting a car should be simple',
     paragraphs: [
       'At Rent a Car Beganović we believe renting a car should be quick, clear and free of hidden costs. That is why we tell you the price up front, hand over the car clean and ready, and stay on the phone for the whole rental.',
-      'We are on the M4 main road in Brđani — a few minutes from Kozarac, about a quarter of an hour from central Prijedor, and on the way to Banja Luka and Kozara National Park. Whether you are here on business, coming home from abroad or your own car is in the garage, we have a car that fits your trip.',
+      'We are in Kozarac — about a quarter of an hour from central Prijedor, on the way to Banja Luka and at the foot of Kozara National Park. Whether you are here on business, coming home from abroad or your own car is in the garage, we have a car that fits your trip.',
     ],
     stats: [
       { value: '6', label: 'cars in the fleet' },
       { value: '3', label: 'automatics' },
       { value: '7', label: 'seats in the Mazda 5' },
-      { value: 'M4', label: 'right on the main road' },
+      { value: '2019', label: 'founded' },
     ],
     imageAlt: 'Prijedor, the river and a church tower at sunset',
   },
@@ -150,8 +153,8 @@ export const en: LocaleMessages = {
       },
       {
         label: 'Pick-up',
-        title: 'Keys on the M4 in Brđani',
-        body: 'You collect the car at our address, with a short walk-round check together. Bring your ID card or passport and a valid driving licence.',
+        title: 'Keys in Kozarac',
+        body: 'You collect the car from us in Kozarac, with a short walk-round check together. Bring your ID card or passport and a valid driving licence.',
         points: ['ID card or passport', 'Valid driving licence', 'Joint vehicle check'],
       },
       {
@@ -163,8 +166,8 @@ export const en: LocaleMessages = {
       {
         label: 'Return',
         title: 'Bring it back, done',
-        body: 'Return the car to the same address at the agreed time. We look it over together and you are done — no waiting, no fuss.',
-        points: ['Same address, agreed time', 'Short joint check', 'Running late? Just let us know'],
+        body: 'Return the car to the same place at the agreed time. We look it over together and you are done — no waiting, no fuss.',
+        points: ['Same place, agreed time', 'Short joint check', 'Running late? Just let us know'],
       },
       {
         label: 'Questions',
@@ -176,20 +179,19 @@ export const en: LocaleMessages = {
   },
   routes: {
     eyebrow: 'Location',
-    title: 'From Brđani you are quickly wherever you are going',
-    intro: 'Our office is on the M4 main road, so there is no driving through the town centre. Approximate driving times from us:',
+    title: 'From Kozarac you are quickly wherever you are going',
+    intro: 'Kozarac sits on the main road between Prijedor and Banja Luka, so there is no driving through the town centre. Approximate driving times from Kozarac:',
     items: [
-      { place: 'Kozarac', note: 'The nearest village, right next to us', km: 4, time: '10 min' },
-      { place: 'Kozara NP — Mrakovica', note: 'Forests, viewpoints and trails', km: 16, time: '25 min' },
-      { place: 'Prijedor centre', note: 'The town on the Sana river', km: 15, time: '20 min' },
-      { place: 'Banja Luka', note: 'The largest city in the region', km: 42, time: '45 min' },
-      { place: 'Banja Luka Airport', note: 'The nearest airport', km: 56, time: '1 h 5 min' },
-      { place: 'Sanski Most', note: 'The Sana and Dabar spring', km: 46, time: '55 min' },
-      { place: 'Novi Grad — border', note: 'Crossing into Croatia', km: 59, time: '1 h 10 min' },
-      { place: 'Zagreb Airport', note: 'Flights from all over Europe', km: 169, time: '2 h 25 min' },
+      { place: 'Kozara NP — Mrakovica', note: 'Forests, viewpoints and trails', km: 11, time: '20 min' },
+      { place: 'Prijedor centre', note: 'The town on the Sana river', km: 12, time: '15 min' },
+      { place: 'Sanski Most', note: 'The Sana and Dabar spring', km: 42, time: '50 min' },
+      { place: 'Banja Luka', note: 'The largest city in the region', km: 44, time: '50 min' },
+      { place: 'Novi Grad — border', note: 'Crossing into Croatia', km: 55, time: '1 h 5 min' },
+      { place: 'Banja Luka Airport', note: 'The nearest airport', km: 58, time: '1 h 5 min' },
+      { place: 'Zagreb Airport', note: 'Flights from all over Europe', km: 166, time: '2 h 25 min' },
     ],
     mapCta: 'Open in Google Maps',
-    addressLabel: 'Our address',
+    addressLabel: 'Where we are',
   },
   diaspora: {
     title: 'Coming home for the summer?',
@@ -223,7 +225,7 @@ export const en: LocaleMessages = {
       },
       {
         q: 'Where do I pick up the car?',
-        a: 'At our address: M4 main road, Brđani, near Kozarac (79101 Prijedor). You will find the exact location on Google Maps.',
+        a: 'From us in Kozarac, Prijedor. We send the exact location and directions when we confirm your booking, and you can also find us on Google Maps.',
       },
       {
         q: 'Can I rent a car for a longer period?',
@@ -243,14 +245,14 @@ export const en: LocaleMessages = {
     ctaBody: 'Send your dates — we confirm availability and the total price before you commit.',
   },
   cta: {
-    title: 'Your car is waiting on the M4.',
+    title: 'Your car is waiting in Kozarac.',
     body: 'Call, send a message or an enquiry — it takes a couple of minutes to arrange.',
     whatsapp: 'Message on WhatsApp',
   },
   about: {
     metaTitle: 'About us | Rent a Car Beganović, Prijedor',
     metaDescription:
-      'Rent a Car Beganović is a local car rental agency on the M4 main road in Brđani near Kozarac, Prijedor. '
+      'Rent a Car Beganović is a local car rental agency in Kozarac, Prijedor, since 2019. '
       + 'Six cars, a clear price up front and direct contact.',
     title: 'A local agency, a straight deal',
     lead: 'Rent a Car Beganović is a car rental agency from Prijedor. We keep it simple: the right car, an honest price up front, and people you talk to directly.',
@@ -261,7 +263,7 @@ export const en: LocaleMessages = {
       },
       {
         title: 'Where we are',
-        body: 'We are on the M4 main road in Brđani, a few minutes from Kozarac and about a quarter of an hour from central Prijedor. The office sits right on the main road towards Banja Luka, so once you have the keys you are on your way — no driving through town.',
+        body: 'We are in Kozarac, about a quarter of an hour from central Prijedor. Kozarac sits on the main road towards Banja Luka and at the foot of Kozara, so once you have the keys you are quickly on your way — no driving through town.',
       },
       {
         title: 'Who we rent to',
@@ -274,6 +276,15 @@ export const en: LocaleMessages = {
       { title: 'A car that is ready', body: 'You get the car clean, checked and ready for the road.' },
       { title: 'Reachable', body: 'During the rental we are on the phone and WhatsApp whenever you need us.' },
     ],
+    servicesEyebrow: 'More than car rental',
+    servicesTitle: 'Cars are our business',
+    servicesIntro: 'Besides the rental, „Beganović“ s.p. Zehrudin Beganović runs a car service workshop and imports and sells vehicles. That is why we know the cars in our fleet down to the last bolt.',
+    services: [
+      { title: 'Car service and repair', body: 'Maintenance and repair of passenger cars. The same workshop looks after our rental cars, so we know exactly what condition each one is in.' },
+      { title: 'Car and motorcycle import and sales', body: 'Looking for a car or motorcycle of your own? Tell us what you need — we import and sell passenger cars and motorcycles.' },
+      { title: 'Agricultural machinery', body: 'Import and sale of agricultural machinery, equipment and attachments. Ask us about what is currently available.' },
+    ],
+    servicesCta: 'Ask about these services',
   },
   terms: {
     metaTitle: 'Rental terms | Rent a Car Beganović, Prijedor',
@@ -286,26 +297,26 @@ export const en: LocaleMessages = {
     basics: [
       'To collect the car you need an ID card or passport and a valid driving licence.',
       'A booking is valid once you confirm it, after we have told you the total price.',
-      'The car is collected and returned at our address: M4, Brđani, 79101 Prijedor.',
+      'The car is collected and returned at our place in Kozarac (Prijedor), at the spot we confirm with your booking.',
       'We check the car together at pick-up and at return.',
     ],
   },
   contactPage: {
     metaTitle: 'Contact | Rent a Car Beganović, Prijedor — +387 62 269 229',
-    metaDescription: 'Contact Rent a Car Beganović: phone and WhatsApp +387 62 269 229, address M4, Brđani, 79101 Prijedor. Send a car rental enquiry.',
+    metaDescription: 'Contact Rent a Car Beganović in Kozarac, Prijedor: phone and WhatsApp +387 62 269 229. Send a car rental enquiry.',
     title: 'Get in touch, it is quick',
     lead: 'The fastest way to reach us is by phone or WhatsApp. To book, you can also send an enquiry through the form.',
     callTitle: 'Phone',
     whatsappTitle: 'WhatsApp',
     whatsappBody: 'Send a message, we reply quickly.',
-    addressTitle: 'Address',
+    addressTitle: 'Location',
     directions: 'Directions on Google Maps',
     formTitle: 'Send a rental enquiry',
   },
   vehicle: {
     metaTitle: '{car} {year}, {gearbox} — car rental Prijedor | Beganović',
     metaDescription:
-      'Rent a {car} ({year}, {gearbox}) in Prijedor, Bosnia. Pick-up on the M4 in Brđani near Kozarac. '
+      'Rent a {car} ({year}, {gearbox}) in Prijedor, Bosnia. Pick-up in Kozarac. '
       + 'Send an enquiry and get the total price up front.',
     specsTitle: 'Key facts',
     spec: {
@@ -322,11 +333,38 @@ export const en: LocaleMessages = {
     similarTitle: 'You might also like',
     backToFleet: 'All cars',
   },
+  transport: {
+    metaTitle: 'Passenger Transport Prijedor & Kozarac | Beganović',
+    metaDescription: 'Passenger transport from Prijedor and Kozarac: transfers to Banja Luka and Zagreb airports, business trips and pick-ups for visitors from abroad. Price agreed upfront. Call +387 62 269 229.',
+    title: 'Passenger transport: you sit back, we drive',
+    lead: 'When you need a ride rather than a car. We drive you to the airport, to a business meeting or to a family celebration — at a price agreed before we set off.',
+    useCasesTitle: 'Where we take you',
+    useCases: [
+      { title: 'Airport transfers', body: 'Banja Luka, Zagreb and other airports in the region. We meet you on arrival or take you to your flight — no parking, no getting back.' },
+      { title: 'Coming home from abroad', body: 'Arriving by plane or coach? We meet you and bring you home to Kozarac, Prijedor or nearby — luggage included.' },
+      { title: 'Business trips', body: 'A meeting in Banja Luka or another city? We drive you there and back while you prepare or work.' },
+      { title: 'Celebrations and day trips', body: 'Guests to a wedding or celebration, a day trip to Kozara — we agree the route, time and number of passengers.' },
+    ],
+    stepsTitle: 'How to book a ride',
+    steps: [
+      { title: 'Tell us the route', body: 'Call or message on WhatsApp: from where, to where, when and how many of you.' },
+      { title: 'Get the price', body: 'We tell you the total price of the ride before you confirm anything.' },
+      { title: 'Off we go', body: 'At the agreed time the driver is at the agreed place. You just get in.' },
+    ],
+    ctaTitle: 'Need a ride?',
+    ctaBody: 'Send us the route and date — we reply with the price and availability.',
+    whatsappMessage: 'Hello, I am interested in passenger transport.\nRoute: \nDate and time: \nPassengers: ',
+    teaserEyebrow: 'Passenger transport',
+    teaserTitle: 'Rather not drive? We drive you.',
+    teaserBody: 'Airport transfers, business trips and pick-ups for visitors from abroad — with our driver, at a price agreed upfront.',
+    teaserCta: 'About passenger transport',
+  },
   footer: {
-    tagline: 'Car rental in Prijedor — automatic and manual cars, right on the M4 main road in Brđani.',
+    tagline: 'Car rental in Prijedor — automatic and manual cars, from Kozarac since 2019.',
     navigation: 'Pages',
     contact: 'Contact',
     rights: 'All rights reserved.',
+    services: 'Car rental · Passenger transport · Car service · Import and sale of cars, motorcycles and agricultural machinery',
     footerNav: 'Footer navigation',
     langs: 'Language',
   },

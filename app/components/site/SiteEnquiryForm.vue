@@ -25,8 +25,8 @@ const accessKey = String(useRuntimeConfig().public.web3formsKey || '')
 
 const selectedCar = useState<string>('enquiry-car', () => '')
 
-const form = reactive({ pickup: '', dropoff: '', name: '', phone: '', message: '' })
-const touched = reactive({ pickup: false, dropoff: false, name: false, phone: false })
+const form = reactive({ pickup: '', dropoff: '', name: '', phone: '', city: '', message: '' })
+const touched = reactive({ pickup: false, dropoff: false, name: false, phone: false, city: false })
 const botcheck = ref('')
 const status = ref<'idle' | 'sending' | 'sent' | 'mailed' | 'error'>('idle')
 
@@ -53,12 +53,13 @@ const errors = computed(() => {
         : '',
     name: touched.name && !form.name.trim() ? required : '',
     phone: touched.phone && !form.phone.trim() ? required : '',
+    city: touched.city && !form.city.trim() ? required : '',
   }
 })
 
 const isValid = computed(() =>
   !!form.pickup && !!form.dropoff && form.dropoff >= form.pickup
-  && !!form.name.trim() && !!form.phone.trim(),
+  && !!form.name.trim() && !!form.phone.trim() && !!form.city.trim(),
 )
 
 /* 2026-07-14 -> 14.07.2026, the way everyone in the region writes a date. */
@@ -75,6 +76,7 @@ function lines() {
     `${f.car}: ${selectedCar.value || f.carAny}`,
     form.name.trim() && `${f.name}: ${form.name.trim()}`,
     form.phone.trim() && `${f.phone}: ${form.phone.trim()}`,
+    form.city.trim() && `${f.city}: ${form.city.trim()}`,
     form.message.trim() && `${f.message}: ${form.message.trim()}`,
   ].filter(Boolean) as string[]
 }
@@ -88,6 +90,7 @@ async function submit() {
   touched.dropoff = true
   touched.name = true
   touched.phone = true
+  touched.city = true
   if (!isValid.value || status.value === 'sending') return
 
   if (botcheck.value) {
@@ -216,6 +219,21 @@ const isHero = computed(() => props.variant === 'hero')
           @blur="touched.phone = true"
         >
         <span v-if="errors.phone" class="mt-1 block text-xs font-semibold text-red-600">{{ errors.phone }}</span>
+      </label>
+
+      <label class="col-span-2 block">
+        <span class="field-label">{{ t.form.city }}</span>
+        <input
+          v-model="form.city"
+          type="text"
+          name="city"
+          autocomplete="address-level2"
+          :placeholder="t.form.cityPlaceholder"
+          class="field"
+          :aria-invalid="!!errors.city"
+          @blur="touched.city = true"
+        >
+        <span v-if="errors.city" class="mt-1 block text-xs font-semibold text-red-600">{{ errors.city }}</span>
       </label>
 
       <label v-if="!isHero" class="col-span-2 block">

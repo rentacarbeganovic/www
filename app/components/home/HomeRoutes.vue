@@ -7,7 +7,8 @@ import { PhArrowUpRight, PhMapPin, PhNavigationArrow } from '@phosphor-icons/vue
  * the road on a native scroll timeline where supported, and the dashed centre
  * line scrolls on its own like road markings passing under the car.
  *
- * Distances are real driving routes from the office (OSRM), rounded. No
+ * Distances are real driving routes from central Kozarac (OSRM), rounded —
+ * the new office address is not confirmed yet. No
  * delivery is implied anywhere: the brief is explicit that it is not offered
  * on the site.
  */
@@ -64,7 +65,7 @@ const { t, business } = useI18n()
               <PhMapPin :size="20" weight="fill" aria-hidden="true" />
             </span>
             <p class="font-display text-lg font-extrabold uppercase text-navy-950" style="font-stretch: 110%">
-              {{ business.shortName }} · M4
+              {{ business.shortName }} · {{ business.locality }}
             </p>
           </li>
           <li

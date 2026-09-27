@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PhCar, PhHandshake, PhPhoneCall } from '@phosphor-icons/vue'
+import { PhCar, PhHandshake, PhMotorcycle, PhPhoneCall, PhTractor, PhWrench } from '@phosphor-icons/vue'
 import { HERO_IMAGES } from '~/data/business'
 
 const { t, business, localeRoute } = useI18n()
@@ -22,6 +22,7 @@ jsonLd(
 )
 
 const VALUE_ICONS = [PhHandshake, PhCar, PhPhoneCall]
+const SERVICE_ICONS = [PhWrench, PhMotorcycle, PhTractor]
 </script>
 
 <template>
@@ -84,6 +85,37 @@ const VALUE_ICONS = [PhHandshake, PhCar, PhPhoneCall]
             {{ t.nav.fleet }}
           </UiButton>
         </div>
+      </div>
+    </section>
+
+    <!-- The owner's other trades: proof the fleet is looked after, and a lead for each. -->
+    <section class="reveal-group section-y">
+      <div class="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-28">
+            <UiSectionHeading :eyebrow="t.about.servicesEyebrow" :title="t.about.servicesTitle" :intro="t.about.servicesIntro" />
+            <UiButton :href="business.phoneHref" variant="dark" size="lg" class="reveal mt-8">
+              {{ t.about.servicesCta }} · <span dir="ltr">{{ business.phoneDisplay }}</span>
+            </UiButton>
+          </div>
+        </div>
+        <ul class="flex flex-col gap-4 lg:col-span-7">
+          <li v-for="(service, i) in t.about.services" :key="service.title" class="reveal">
+            <article class="surface surface-hover group flex gap-5 p-6 md:p-7">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-navy-950 text-flame-400 transition-transform duration-300 ease-out group-hover:-rotate-6">
+                <component :is="SERVICE_ICONS[i]" :size="26" weight="duotone" aria-hidden="true" />
+              </span>
+              <div>
+                <h3 class="h-card">
+                  {{ service.title }}
+                </h3>
+                <p class="body-base mt-2">
+                  {{ service.body }}
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 

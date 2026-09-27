@@ -94,7 +94,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Gdje preuzeti auto',
         paragraphs: [
-          'Rent a Car Beganović nalazi se na magistralnom putu M4 u Brđanima, par minuta od Kozarca i oko četvrt sata od centra Prijedora. Prednost te lokacije je jednostavna: nakon preuzimanja ključeva odmah ste na glavnom putu prema Banjoj Luci, Kozari ili Novom Gradu, bez vožnje kroz gradsku gužvu.',
+          'Rent a Car Beganović nalazi se u Kozarcu, oko četvrt sata od centra Prijedora. Prednost te lokacije je jednostavna: nakon preuzimanja ključeva brzo ste na magistrali prema Banjoj Luci, Kozari ili Novom Gradu, bez vožnje kroz gradsku gužvu.',
         ],
       },
     ],
@@ -126,7 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'Ruta i vrijeme vožnje',
         paragraphs: [
           'Na Kozaru se ide preko Kozarca. S magistrale M4 skrenete u Kozarcu i pratite asfaltni put koji vijuga kroz šumu oko 12 kilometara, do glavnog parkinga na Mrakovici.',
-          'Od naše kancelarije u Brđanima to je oko 16 kilometara, odnosno 25-ak minuta vožnje. Iz centra Prijedora računajte još četvrt sata, a iz Banje Luke oko sat vremena.',
+          'Od Kozarca je to oko 11 kilometara, odnosno 20-ak minuta vožnje uz planinu. Iz centra Prijedora računajte još četvrt sata, a iz Banje Luke oko sat vremena.',
         ],
       },
       {
@@ -151,7 +151,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Prijedlog za cijeli dan',
         bullets: [
-          'Jutro: preuzimanje auta u Brđanima i kafa u Kozarcu.',
+          'Jutro: preuzimanje auta i kafa u Kozarcu.',
           'Prije podne: uspon na Mrakovicu, spomenik i kraća staza do vidikovca.',
           'Ručak: u prirodi na Kozari ili nazad u Kozarcu.',
           'Poslijepodne: šetnja uz Sanu u Prijedoru ili nastavak prema Banjoj Luci.',

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { PhChatsCircle, PhGearSix, PhRoadHorizon, PhTag } from '@phosphor-icons/vue'
+import { PhChatsCircle, PhRoadHorizon, PhTag, PhWrench } from '@phosphor-icons/vue'
 
 /*
- * Four reasons, each answering an objection: price, location, gearbox,
- * who you deal with. Big outlined index numbers give the grid a rhythm and
+ * Four reasons, each answering an objection: price, location, the state of
+ * the cars (the owner runs his own workshop), who you deal with. Big outlined index numbers give the grid a rhythm and
  * the icon tile tilts on hover like a steering input.
  */
 const { t } = useI18n()
-const ICONS = [PhTag, PhRoadHorizon, PhGearSix, PhChatsCircle]
+const ICONS = [PhTag, PhRoadHorizon, PhWrench, PhChatsCircle]
 </script>
 
 <template>

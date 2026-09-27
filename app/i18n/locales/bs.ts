@@ -4,9 +4,11 @@ import type { LocaleMessages } from '../types'
  * Master copy. en, de and ar are translations of this file.
  *
  * Claims policy — what the copy may and may not say:
- *  - Safe: the six cars, their year and gearbox; the address on the M4 in
- *    Brđani; real driving times from the office (OSRM, rounded); that the
- *    total price is quoted before the customer confirms.
+ *  - Safe: the six cars, their year and gearbox; the location as
+ *    "Prijedor – Kozarac" only (the client is moving, no street address until
+ *    the new one is confirmed); driving times from central Kozarac (OSRM,
+ *    rounded); in business since 2019; that the total price is quoted before
+ *    the customer confirms.
  *  - Never: delivery of any kind (the client asked not to mention it),
  *    Google reviews or ratings (there are none), a deposit figure, prices,
  *    insurance packages, minimum age, mileage or cross-border rules. Those
@@ -17,11 +19,12 @@ export const bs: LocaleMessages = {
     title: 'Rent a Car Prijedor — Beganović | Automatik i manuelni',
     description:
       'Rent a car Beganović, Prijedor: šest vozila s automatskim i manuelnim mjenjačem, '
-      + 'porodični sedmosjed i SUV. Preuzimanje na M4 u Brđanima kod Kozarca. Pozovite 062 269 229.',
+      + 'porodični sedmosjed i SUV. Lokalna agencija iz Kozarca, od 2019. Pozovite 062 269 229.',
     ogImageAlt: 'Vozila Rent a Car Beganović ispred Prijedora u zalasku sunca',
   },
   nav: {
     fleet: 'Automobili',
+    transport: 'Prevoz putnika',
     about: 'O nama',
     terms: 'Uslovi',
     blog: 'Blog',
@@ -34,18 +37,18 @@ export const bs: LocaleMessages = {
     langLabel: 'Promijeni jezik',
   },
   hero: {
-    location: 'M4, Brđani kod Kozarca · Prijedor',
+    location: 'Prijedor – Kozarac',
     titleLead: 'Rent a car Prijedor.',
     titleAccent: 'Sjednite i vozite.',
     subtitle:
-      'Šest vozila — automatik i manuelni, gradski, porodični i SUV — na magistrali M4. '
+      'Šest vozila — automatik i manuelni, gradski, porodični i SUV — u Kozarcu kod Prijedora. '
       + 'Javite datume, dobijete ukupnu cijenu unaprijed i auto spreman za put.',
     ctaCall: 'Pozovi',
     ctaForm: 'Pošalji upit',
     proof: [
       'Ukupna cijena prije potvrde',
       'Tri automatika u ponudi',
-      'Odmah na magistrali, bez gradske gužve',
+      'Lokalna agencija od 2019.',
     ],
     lineupAlt: 'Peugeot 5008, Golf 6, Peugeot 308, Golf 7 i Mazda 5 — vozila Rent a Car Beganović',
   },
@@ -60,6 +63,8 @@ export const bs: LocaleMessages = {
     namePlaceholder: 'Vaše ime',
     phone: 'Telefon',
     phonePlaceholder: '06x xxx xxx',
+    city: 'Mjesto stanovanja',
+    cityPlaceholder: 'Npr. Prijedor, Beč, Stockholm',
     message: 'Napomena',
     messagePlaceholder: 'Npr. broj putnika, vrijeme preuzimanja…',
     submit: 'Pošalji upit',
@@ -77,9 +82,9 @@ export const bs: LocaleMessages = {
     'Rent a car Prijedor',
     'Automatik i manuelni',
     'Sedmosjed za porodicu',
-    'Na magistrali M4',
-    'Kozara za 25 minuta',
-    'Banja Luka za 45 minuta',
+    'Prijedor – Kozarac',
+    'Kozara za 20 minuta',
+    'Banja Luka za 50 minuta',
     'Cijena poznata unaprijed',
   ],
   why: {
@@ -93,11 +98,11 @@ export const bs: LocaleMessages = {
       },
       {
         title: 'Odmah ste na putu',
-        body: 'Nalazimo se na magistrali M4 u Brđanima, između Prijedora i Kozarca. Uzmete ključeve i već ste na glavnom putu — bez gradske gužve i traženja parkinga.',
+        body: 'Nalazimo se u Kozarcu, na putu između Prijedora i Banje Luke. Uzmete ključeve i brzo ste na magistrali — bez gradske gužve i traženja parkinga.',
       },
       {
-        title: 'Automatik ili manuelni',
-        body: 'Tri automatika i tri manuelca: od Golfa za grad, preko sedmosjeda za cijelu porodicu, do Kuge za planinske ceste Kozare.',
+        title: 'Vozila iz vlastitog servisa',
+        body: 'Pored najma držimo i servis vozila, pa naša auta održavamo sami. Znamo istoriju svakog vozila i šta je na njemu rađeno.',
       },
       {
         title: 'Razgovarate s nama, ne s call centrom',
@@ -132,13 +137,13 @@ export const bs: LocaleMessages = {
     title: 'Najam auta treba biti jednostavan',
     paragraphs: [
       'U Rent a Car Beganović vjerujemo da najam vozila treba biti brz, jasan i bez skrivenih troškova. Zato vam cijenu kažemo unaprijed, auto predajemo čist i spreman, a na telefonu smo cijelo vrijeme trajanja najma.',
-      'Nalazimo se na magistralnom putu M4 u Brđanima — par minuta od Kozarca, oko četvrt sata od centra Prijedora i na putu prema Banjoj Luci i Nacionalnom parku Kozara. Bilo da ste ovdje poslom, dolazite kući iz dijaspore ili vam je auto na servisu, imamo vozilo koje odgovara vašem putu.',
+      'Nalazimo se u Kozarcu — oko četvrt sata od centra Prijedora, na putu prema Banjoj Luci i u podnožju Nacionalnog parka Kozara. Bilo da ste ovdje poslom, dolazite kući iz dijaspore ili vam je auto na servisu, imamo vozilo koje odgovara vašem putu.',
     ],
     stats: [
       { value: '6', label: 'vozila u ponudi' },
       { value: '3', label: 'automatika' },
       { value: '7', label: 'sjedišta u Mazdi 5' },
-      { value: 'M4', label: 'odmah na magistrali' },
+      { value: '2019', label: 'godina osnivanja' },
     ],
     imageAlt: 'Prijedor, rijeka i crkveni toranj u zalasku sunca',
   },
@@ -161,8 +166,8 @@ export const bs: LocaleMessages = {
       },
       {
         label: 'Preuzimanje',
-        title: 'Ključevi na M4 u Brđanima',
-        body: 'Vozilo preuzimate na našoj adresi, uz kratak zajednički pregled auta. Ponesite ličnu kartu ili pasoš i važeću vozačku dozvolu.',
+        title: 'Ključevi u Kozarcu',
+        body: 'Vozilo preuzimate kod nas u Kozarcu, uz kratak zajednički pregled auta. Ponesite ličnu kartu ili pasoš i važeću vozačku dozvolu.',
         points: ['Lična karta ili pasoš', 'Važeća vozačka dozvola', 'Zajednički pregled vozila'],
       },
       {
@@ -174,8 +179,8 @@ export const bs: LocaleMessages = {
       {
         label: 'Vraćanje',
         title: 'Vratite auto i to je to',
-        body: 'Auto vraćate na istu adresu u dogovoreno vrijeme. Zajedno ga pogledamo i gotovi ste — bez čekanja i komplikacija.',
-        points: ['Ista adresa, dogovoreno vrijeme', 'Kratak zajednički pregled', 'Kasnite? Samo javite na vrijeme'],
+        body: 'Auto vraćate na isto mjesto u dogovoreno vrijeme. Zajedno ga pogledamo i gotovi ste — bez čekanja i komplikacija.',
+        points: ['Isto mjesto, dogovoreno vrijeme', 'Kratak zajednički pregled', 'Kasnite? Samo javite na vrijeme'],
       },
       {
         label: 'Pitanja',
@@ -187,20 +192,19 @@ export const bs: LocaleMessages = {
   },
   routes: {
     eyebrow: 'Lokacija',
-    title: 'Iz Brđana ste brzo gdje god krenuli',
-    intro: 'Kancelarija je na magistralnom putu M4, pa ne morate kroz centar grada. Okvirna vremena vožnje od nas:',
+    title: 'Iz Kozarca ste brzo gdje god krenuli',
+    intro: 'Kozarac je na magistrali između Prijedora i Banje Luke, pa ne morate kroz centar grada. Okvirna vremena vožnje od Kozarca:',
     items: [
-      { place: 'Kozarac', note: 'Najbliže mjesto, odmah do nas', km: 4, time: '10 min' },
-      { place: 'NP Kozara — Mrakovica', note: 'Šume, vidikovci i staze', km: 16, time: '25 min' },
-      { place: 'Prijedor, centar', note: 'Grad na rijeci Sani', km: 15, time: '20 min' },
-      { place: 'Banja Luka', note: 'Najveći grad Krajine', km: 42, time: '45 min' },
-      { place: 'Aerodrom Banja Luka', note: 'Najbliži aerodrom', km: 56, time: '1 h 5 min' },
-      { place: 'Sanski Most', note: 'Sana i Dabarsko vrelo', km: 46, time: '55 min' },
-      { place: 'Novi Grad — granica', note: 'Prelaz prema Hrvatskoj', km: 59, time: '1 h 10 min' },
-      { place: 'Aerodrom Zagreb', note: 'Letovi iz cijele Evrope', km: 169, time: '2 h 25 min' },
+      { place: 'NP Kozara — Mrakovica', note: 'Šume, vidikovci i staze', km: 11, time: '20 min' },
+      { place: 'Prijedor, centar', note: 'Grad na rijeci Sani', km: 12, time: '15 min' },
+      { place: 'Sanski Most', note: 'Sana i Dabarsko vrelo', km: 42, time: '50 min' },
+      { place: 'Banja Luka', note: 'Najveći grad Krajine', km: 44, time: '50 min' },
+      { place: 'Novi Grad — granica', note: 'Prelaz prema Hrvatskoj', km: 55, time: '1 h 5 min' },
+      { place: 'Aerodrom Banja Luka', note: 'Najbliži aerodrom', km: 58, time: '1 h 5 min' },
+      { place: 'Aerodrom Zagreb', note: 'Letovi iz cijele Evrope', km: 166, time: '2 h 25 min' },
     ],
     mapCta: 'Otvori u Google Maps',
-    addressLabel: 'Naša adresa',
+    addressLabel: 'Gdje smo',
   },
   diaspora: {
     title: 'Dolazite kući na odmor?',
@@ -234,7 +238,7 @@ export const bs: LocaleMessages = {
       },
       {
         q: 'Gdje preuzimam vozilo?',
-        a: 'Na našoj adresi: magistralni put M4, Brđani, kod Kozarca (79101 Prijedor). Tačnu lokaciju pronađite na Google Maps.',
+        a: 'Kod nas u Kozarcu, Prijedor. Tačnu lokaciju i upute pošaljemo vam uz potvrdu rezervacije, a možete je pronaći i na Google Maps.',
       },
       {
         q: 'Mogu li iznajmiti auto na duži period?',
@@ -254,14 +258,14 @@ export const bs: LocaleMessages = {
     ctaBody: 'Pošaljite datume — javljamo dostupnost i ukupnu cijenu prije potvrde.',
   },
   cta: {
-    title: 'Vaš auto čeka na M4.',
+    title: 'Vaš auto čeka u Kozarcu.',
     body: 'Pozovite, pošaljite poruku ili upit — dogovor traje par minuta.',
     whatsapp: 'Piši na WhatsApp',
   },
   about: {
     metaTitle: 'O nama | Rent a Car Beganović, Prijedor',
     metaDescription:
-      'Rent a Car Beganović je lokalna agencija za najam vozila na magistrali M4 u Brđanima kod Kozarca, Prijedor. '
+      'Rent a Car Beganović je lokalna agencija za najam vozila iz Kozarca, Prijedor, od 2019. godine. '
       + 'Šest vozila, jasna cijena unaprijed i direktan kontakt.',
     title: 'Lokalna agencija, jasan dogovor',
     lead: 'Rent a Car Beganović je agencija za najam vozila iz Prijedora. Radimo jednostavno: pravi auto, poštena cijena unaprijed i ljudi s kojima razgovarate direktno.',
@@ -272,7 +276,7 @@ export const bs: LocaleMessages = {
       },
       {
         title: 'Gdje smo',
-        body: 'Nalazimo se na magistralnom putu M4 u Brđanima, par minuta od Kozarca i oko četvrt sata od centra Prijedora. Lokacija je odmah na glavnom putu prema Banjoj Luci, pa ste nakon preuzimanja ključeva odmah na putu — bez vožnje kroz grad.',
+        body: 'Nalazimo se u Kozarcu, oko četvrt sata od centra Prijedora. Kozarac je na magistrali prema Banjoj Luci i u podnožju Kozare, pa ste nakon preuzimanja ključeva brzo na putu — bez vožnje kroz grad.',
       },
       {
         title: 'Kome iznajmljujemo',
@@ -285,6 +289,15 @@ export const bs: LocaleMessages = {
       { title: 'Spreman auto', body: 'Vozilo dobijate čisto, pregledano i spremno za put.' },
       { title: 'Dostupnost', body: 'Tokom najma smo na telefonu i WhatsAppu kad god zatreba.' },
     ],
+    servicesEyebrow: 'Više od rent a cara',
+    servicesTitle: 'Vozila su nam posao',
+    servicesIntro: 'Pored najma, „Beganović“ s.p. Zehrudin Beganović bavi se servisom, uvozom i prodajom vozila. Zato automobile iz naše ponude poznajemo do posljednjeg šarafa.',
+    services: [
+      { title: 'Servis vozila', body: 'Održavanje i popravka putničkih vozila. Isti servis brine i o našim rent a car vozilima, pa tačno znamo u kakvom je stanju svako od njih.' },
+      { title: 'Uvoz i prodaja vozila i motocikala', body: 'Tražite auto ili motocikl za sebe? Recite nam šta vam treba — uvozimo i prodajemo putnička vozila i motocikle.' },
+      { title: 'Poljoprivredne mašine', body: 'Uvoz i prodaja poljoprivrednih mašina, opreme i priključaka. Pitajte nas za trenutnu ponudu.' },
+    ],
+    servicesCta: 'Pitajte za ove usluge',
   },
   terms: {
     metaTitle: 'Uslovi najma | Rent a Car Beganović, Prijedor',
@@ -297,26 +310,26 @@ export const bs: LocaleMessages = {
     basics: [
       'Za preuzimanje vozila potrebni su lična karta ili pasoš i važeća vozačka dozvola.',
       'Rezervacija važi tek kada je potvrdite, nakon što vam javimo ukupnu cijenu.',
-      'Vozilo se preuzima i vraća na našoj adresi: M4, Brđani, 79101 Prijedor.',
+      'Vozilo se preuzima i vraća kod nas u Kozarcu (Prijedor), na mjestu koje potvrdimo uz rezervaciju.',
       'Pri preuzimanju i vraćanju vozilo zajedno pregledamo.',
     ],
   },
   contactPage: {
     metaTitle: 'Kontakt | Rent a Car Beganović, Prijedor — 062 269 229',
-    metaDescription: 'Kontaktirajte Rent a Car Beganović: telefon i WhatsApp 062 269 229, adresa M4, Brđani, 79101 Prijedor. Pošaljite upit za najam vozila.',
+    metaDescription: 'Kontaktirajte Rent a Car Beganović iz Kozarca, Prijedor: telefon i WhatsApp 062 269 229. Pošaljite upit za najam vozila.',
     title: 'Javite se, dogovor je brz',
     lead: 'Najbrže do nas — telefonom ili WhatsAppom. Za rezervaciju možete poslati i upit preko forme.',
     callTitle: 'Telefon',
     whatsappTitle: 'WhatsApp',
     whatsappBody: 'Pošaljite poruku, odgovaramo brzo.',
-    addressTitle: 'Adresa',
+    addressTitle: 'Lokacija',
     directions: 'Upute na Google Maps',
     formTitle: 'Pošaljite upit za najam',
   },
   vehicle: {
     metaTitle: '{car} {year}, {gearbox} — rent a car Prijedor | Beganović',
     metaDescription:
-      'Iznajmite {car} ({year}, {gearbox}) u Prijedoru. Preuzimanje na M4 u Brđanima kod Kozarca. '
+      'Iznajmite {car} ({year}, {gearbox}) u Prijedoru. Preuzimanje u Kozarcu. '
       + 'Pošaljite upit i dobijte ukupnu cijenu unaprijed.',
     specsTitle: 'Osnovni podaci',
     spec: {
@@ -333,11 +346,38 @@ export const bs: LocaleMessages = {
     similarTitle: 'Pogledajte i ova vozila',
     backToFleet: 'Sva vozila',
   },
+  transport: {
+    metaTitle: 'Prevoz putnika Prijedor i Kozarac | Beganović',
+    metaDescription: 'Prevoz putnika iz Prijedora i Kozarca: transferi do aerodroma Banja Luka i Zagreb, poslovna putovanja i dočeci dijaspore. Cijena unaprijed. Pozovite 062 269 229.',
+    title: 'Prevoz putnika: vi sjedite, mi vozimo',
+    lead: 'Kad vam ne treba auto, nego vožnja. Vozimo vas do aerodroma, na poslovni sastanak ili na porodično slavlje — uz cijenu dogovorenu prije polaska.',
+    useCasesTitle: 'Kuda vas vozimo',
+    useCases: [
+      { title: 'Aerodromski transferi', body: 'Banja Luka, Zagreb i drugi aerodromi u regiji. Dočekamo vas na dolasku ili odvezemo na let, bez brige o parkingu i povratku.' },
+      { title: 'Dočeci dijaspore', body: 'Dolazite avionom ili autobusom? Dočekamo vas i dovezemo kući u Kozarac, Prijedor ili okolinu — zajedno s prtljagom.' },
+      { title: 'Poslovna putovanja', body: 'Sastanak u Banjoj Luci ili drugom gradu? Vozimo vas tamo i nazad, a vi se u međuvremenu pripremate ili radite.' },
+      { title: 'Slavlja i izleti', body: 'Prevoz gostiju na svadbu ili slavlje, izlet na Kozaru — dogovorimo relaciju, vrijeme i broj putnika.' },
+    ],
+    stepsTitle: 'Kako do vožnje',
+    steps: [
+      { title: 'Javite relaciju', body: 'Pozovite ili pišite na WhatsApp: odakle, kuda, kada i koliko vas putuje.' },
+      { title: 'Dobijete cijenu', body: 'Javimo ukupnu cijenu vožnje prije nego što bilo šta potvrdite.' },
+      { title: 'Krećemo', body: 'U dogovoreno vrijeme vozač je na dogovorenom mjestu. Vi samo sjednete.' },
+    ],
+    ctaTitle: 'Treba vam vožnja?',
+    ctaBody: 'Pošaljite relaciju i datum — javljamo cijenu i slobodan termin.',
+    whatsappMessage: 'Pozdrav, zanima me prevoz putnika.\nRelacija: \nDatum i vrijeme: \nBroj putnika: ',
+    teaserEyebrow: 'Prevoz putnika',
+    teaserTitle: 'Ne želite voziti? Mi vozimo vas.',
+    teaserBody: 'Aerodromski transferi, poslovna putovanja i dočeci dijaspore — s našim vozačem i cijenom dogovorenom unaprijed.',
+    teaserCta: 'Više o prevozu',
+  },
   footer: {
-    tagline: 'Rent a car u Prijedoru — vozila s automatskim i manuelnim mjenjačem, odmah na magistrali M4 u Brđanima.',
+    tagline: 'Rent a car u Prijedoru — vozila s automatskim i manuelnim mjenjačem, iz Kozarca od 2019.',
     navigation: 'Stranice',
     contact: 'Kontakt',
     rights: 'Sva prava zadržana.',
+    services: 'Rent a car · Prevoz putnika · Servis vozila · Uvoz i prodaja vozila, motocikala i poljoprivrednih mašina',
     footerNav: 'Navigacija u podnožju',
     langs: 'Jezik',
   },

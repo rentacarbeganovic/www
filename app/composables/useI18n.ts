@@ -1,4 +1,4 @@
-import { BUSINESS, LOCALE_OPTIONS } from '~/data/business'
+import { BUSINESS, LOCALE_OPTIONS, TRANSPORT_LIVE } from '~/data/business'
 import { locales } from '~/i18n'
 import { DEFAULT_LOCALE, localePath, localesForPath, stripLocale } from '~/i18n/routing'
 import type { Locale } from '~/i18n/types'
@@ -32,12 +32,14 @@ export function useI18n() {
   }
 
   /*
-   * The menu, as specified: Automobili, O nama, Uslovi, Blog, Kontakt.
-   * Automobili is a section of the home page, not a page of its own. Blog is
-   * published in Bosnian only, so it appears only in that locale.
+   * The menu, as specified: Automobili, O nama, Uslovi, Blog, Kontakt, plus
+   * Prevoz putnika once TRANSPORT_LIVE. Automobili is a section of the home
+   * page, not a page of its own. Blog is published in Bosnian only, so it
+   * appears only in that locale.
    */
   const menuLinks = computed(() => [
     { label: t.value.nav.fleet, to: `${localePath('/', locale.value)}#vozila` },
+    ...(TRANSPORT_LIVE ? [{ label: t.value.nav.transport, to: localePath('/prevoz-putnika', locale.value) }] : []),
     { label: t.value.nav.about, to: localePath('/o-nama', locale.value) },
     { label: t.value.nav.terms, to: localePath('/uslovi', locale.value) },
     ...(locale.value === 'bs' ? [{ label: t.value.nav.blog, to: '/blog' }] : []),

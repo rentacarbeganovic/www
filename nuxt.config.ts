@@ -14,6 +14,7 @@ const BASE_ROUTES = [
   '/o-nama',
   '/uslovi',
   '/kontakt',
+  '/prevoz-putnika',
   '/blog',
   '/blog/rent-a-car-prijedor-sta-trebate-znati',
   '/blog/nacionalni-park-kozara-autom-iz-prijedora',
